@@ -506,15 +506,40 @@
         }
 
         function autoDetectColumns() {
-            const openRe  = /\b(open|origin|source|start|creat|initial|from|assign.*group|opened)\b/i;
-            const routeRe = /\b(rout|path|transfer|escalat|middle|via|through|intermediate|handoff|hop)\b/i;
-            const closeRe = /\b(clos|resolv|end|finish|final|dest|target|complet|resolved)\b/i;
+            // First, try exact matches for common column names
             let foundOpen = false, foundRoute = false, foundClose = false;
+            
             for (const h of csvHeaders) {
-                if (!foundOpen && openRe.test(h))  { $colOpen.value = h; foundOpen = true; }
-                if (!foundRoute && routeRe.test(h)) { $colRoute.value = h; foundRoute = true; }
-                if (!foundClose && closeRe.test(h)) { $colClose.value = h; foundClose = true; }
+                const lower = h.toLowerCase();
+                
+                // Exact matches first
+                if (!foundOpen && (lower === 'open_group' || lower === 'opening_group' || lower === 'opened_by')) {
+                    $colOpen.value = h;
+                    foundOpen = true;
+                }
+                if (!foundRoute && (lower === 'routing_groups' || lower === 'routing_group' || lower === 'route_path')) {
+                    $colRoute.value = h;
+                    foundRoute = true;
+                }
+                if (!foundClose && (lower === 'closed_group' || lower === 'closing_group' || lower === 'resolved_by')) {
+                    $colClose.value = h;
+                    foundClose = true;
+                }
             }
+            
+            // If exact matches didn't work, try regex patterns
+            if (!foundOpen || !foundRoute || !foundClose) {
+                const openRe  = /\b(open|origin|source|start|creat|initial|from|assign.*group|opened)\b/i;
+                const routeRe = /\b(rout|path|transfer|escalat|middle|via|through|intermediate|handoff|hop)\b/i;
+                const closeRe = /\b(clos|resolv|end|finish|final|dest|target|complet|resolved)\b/i;
+                
+                for (const h of csvHeaders) {
+                    if (!foundOpen && openRe.test(h))  { $colOpen.value = h; foundOpen = true; }
+                    if (!foundRoute && routeRe.test(h)) { $colRoute.value = h; foundRoute = true; }
+                    if (!foundClose && closeRe.test(h)) { $colClose.value = h; foundClose = true; }
+                }
+            }
+            
             // Fallback: if we have exactly 3 or fewer non-id-like columns, map by position
             if (!foundOpen && !foundRoute && !foundClose) {
                 const candidates = csvHeaders.filter(h => !/\b(id|key|number|#|priority|time|hour|date|min)\b/i.test(h));
