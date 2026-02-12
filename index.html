@@ -269,7 +269,13 @@
                 <input type="file" id="file-input" accept=".csv,.tsv,.txt">
             </div>
             <div class="upload-actions">
-                <button class="link-btn" id="btn-sample">Load sample data</button>
+                <select id="sample-selector" style="padding: 0.5rem 1rem; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: var(--radius); cursor: pointer; font-size: 0.9rem; margin-right: 0.5rem;">
+                    <option value="">Select sample dataset...</option>
+                    <option value="small">Small (50 tickets) - Quick demo</option>
+                    <option value="medium">Medium (200 tickets) - Realistic</option>
+                    <option value="large">Large (1000 tickets) - Stress test</option>
+                </select>
+                <button class="link-btn" id="btn-sample">Load Sample</button>
             </div>
             <div id="upload-error" class="error-msg hidden"></div>
         </div>
@@ -423,71 +429,50 @@
         // ===================================================================
         // SAMPLE DATA
         // ===================================================================
+        const $sampleSelector = document.getElementById('sample-selector');
         $btnSample.addEventListener('click', loadSampleData);
 
-        function loadSampleData() {
-            const sampleCSV = generateSampleCSV();
-            Papa.parse(sampleCSV, {
-                header: true,
-                skipEmptyLines: true,
-                complete: function(results) {
-                    csvData = results.data;
-                    csvHeaders = results.meta.fields;
-                    totalTickets = csvData.length;
-                    showConfig();
-                }
-            });
+        async function loadSampleData() {
+            const size = $sampleSelector.value;
+            if (!size) {
+                showError($uploadErr, 'Please select a sample dataset size first');
+                return;
+            }
+            
+            const filename = `sample-data-${size}.csv`;
+            $btnSample.disabled = true;
+            $btnSample.textContent = 'Loading...';
+            
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) throw new Error(`Failed to load ${filename}`);
+                const csvText = await response.text();
+                
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        csvData = results.data;
+                        csvHeaders = results.meta.fields;
+                        totalTickets = csvData.length;
+                        showConfig();
+                        $btnSample.disabled = false;
+                        $btnSample.textContent = 'Load Sample';
+                    },
+                    error: function(err) {
+                        showError($uploadErr, 'Error parsing CSV: ' + err.message);
+                        $btnSample.disabled = false;
+                        $btnSample.textContent = 'Load Sample';
+                    }
+                });
+            } catch (err) {
+                showError($uploadErr, 'Failed to load sample data: ' + err.message);
+                $btnSample.disabled = false;
+                $btnSample.textContent = 'Load Sample';
+            }
         }
 
-        function generateSampleCSV() {
-            const groups = [
-                'Service Desk', 'Help Desk', 'Network Operations', 'Security Operations',
-                'Desktop Support', 'Application Development', 'Database Administration',
-                'Cloud Infrastructure', 'Identity & Access', 'Change Management',
-                'Vendor Management', 'Email & Collaboration', 'Storage & Backup'
-            ];
-            const patterns = [
-                { open: 'Service Desk', route: ['Desktop Support'], close: 'Desktop Support', weight: 18 },
-                { open: 'Service Desk', route: ['Network Operations'], close: 'Network Operations', weight: 10 },
-                { open: 'Service Desk', route: [], close: 'Service Desk', weight: 8 },
-                { open: 'Service Desk', route: ['Network Operations', 'Cloud Infrastructure'], close: 'Cloud Infrastructure', weight: 9 },
-                { open: 'Service Desk', route: ['Security Operations', 'Identity & Access'], close: 'Identity & Access', weight: 6 },
-                { open: 'Service Desk', route: ['Application Development'], close: 'Application Development', weight: 8 },
-                { open: 'Service Desk', route: ['Application Development', 'Database Administration'], close: 'Database Administration', weight: 5 },
-                { open: 'Help Desk', route: ['Desktop Support'], close: 'Desktop Support', weight: 7 },
-                { open: 'Service Desk', route: ['Email & Collaboration'], close: 'Email & Collaboration', weight: 5 },
-                { open: 'Service Desk', route: ['Cloud Infrastructure'], close: 'Cloud Infrastructure', weight: 4 },
-                { open: 'Service Desk', route: ['Storage & Backup'], close: 'Storage & Backup', weight: 4 },
-                { open: 'Service Desk', route: ['Change Management', 'Application Development'], close: 'Application Development', weight: 3 },
-                { open: 'Service Desk', route: ['Network Operations', 'Security Operations'], close: 'Security Operations', weight: 3 },
-                { open: 'Help Desk', route: ['Network Operations'], close: 'Network Operations', weight: 3 },
-                { open: 'Service Desk', route: ['Vendor Management'], close: 'Vendor Management', weight: 3 },
-                { open: 'Service Desk', route: ['Security Operations'], close: 'Security Operations', weight: 2 },
-                { open: 'Service Desk', route: ['Change Management', 'Cloud Infrastructure', 'Application Development'], close: 'Application Development', weight: 2 },
-                { open: 'Service Desk', route: ['Desktop Support', 'Vendor Management'], close: 'Vendor Management', weight: 2 },
-                { open: 'Help Desk', route: ['Email & Collaboration'], close: 'Email & Collaboration', weight: 2 },
-                { open: 'Help Desk', route: [], close: 'Help Desk', weight: 2 },
-            ];
-            const priorities = ['P1', 'P2', 'P3', 'P4'];
-            const lines = ['ticket_id,priority,open_group,routing_groups,closed_group,resolution_hours'];
-            let id = 1;
-            for (const p of patterns) {
-                for (let i = 0; i < p.weight; i++) {
-                    const pri = priorities[Math.floor(Math.random() * 4)];
-                    const hours = (Math.random() * 40 + 0.5).toFixed(1);
-                    const routing = p.route.join('|');
-                    lines.push(`TKT-${String(id++).padStart(4,'0')},${pri},${p.open},${routing},${p.close},${hours}`);
-                }
-            }
-            // Shuffle rows (keep header)
-            const header = lines[0];
-            const rows = lines.slice(1);
-            for (let i = rows.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [rows[i], rows[j]] = [rows[j], rows[i]];
-            }
-            return header + '\n' + rows.join('\n');
-        }
+        // Old inline sample generator removed - now loads from CSV files
 
         // ===================================================================
         // CONFIG PANEL
