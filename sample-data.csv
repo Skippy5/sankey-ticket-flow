@@ -1,0 +1,81 @@
+ticket_id,priority,open_group,routing_groups,closed_group,resolution_hours
+TKT-0001,P3,Service Desk,Desktop Support,Desktop Support,4.2
+TKT-0002,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,18.5
+TKT-0003,P4,Service Desk,,Service Desk,0.5
+TKT-0004,P3,Service Desk,Desktop Support,Desktop Support,6.1
+TKT-0005,P1,Service Desk,Security Operations|Identity & Access,Identity & Access,24.3
+TKT-0006,P3,Service Desk,Desktop Support,Desktop Support,3.8
+TKT-0007,P2,Service Desk,Network Operations,Network Operations,8.7
+TKT-0008,P4,Service Desk,,Service Desk,0.3
+TKT-0009,P3,Service Desk,Desktop Support,Desktop Support,5.5
+TKT-0010,P2,Service Desk,Application Development,Application Development,12.4
+TKT-0011,P3,Service Desk,Desktop Support,Desktop Support,4.0
+TKT-0012,P1,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,22.1
+TKT-0013,P3,Help Desk,Desktop Support,Desktop Support,5.2
+TKT-0014,P2,Service Desk,Application Development|Database Administration,Database Administration,16.8
+TKT-0015,P3,Service Desk,Desktop Support,Desktop Support,3.3
+TKT-0016,P4,Service Desk,Email & Collaboration,Email & Collaboration,2.1
+TKT-0017,P2,Service Desk,Network Operations,Network Operations,9.4
+TKT-0018,P3,Service Desk,Desktop Support,Desktop Support,4.7
+TKT-0019,P1,Service Desk,Security Operations|Identity & Access,Identity & Access,28.6
+TKT-0020,P3,Service Desk,Cloud Infrastructure,Cloud Infrastructure,7.3
+TKT-0021,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,19.2
+TKT-0022,P4,Service Desk,,Service Desk,0.8
+TKT-0023,P3,Service Desk,Desktop Support,Desktop Support,5.9
+TKT-0024,P2,Service Desk,Application Development,Application Development,11.6
+TKT-0025,P3,Help Desk,Desktop Support,Desktop Support,4.4
+TKT-0026,P3,Service Desk,Desktop Support,Desktop Support,3.6
+TKT-0027,P2,Service Desk,Network Operations,Network Operations,10.2
+TKT-0028,P1,Service Desk,Change Management|Application Development,Application Development,32.5
+TKT-0029,P3,Service Desk,Storage & Backup,Storage & Backup,6.7
+TKT-0030,P2,Service Desk,Network Operations|Security Operations,Security Operations,15.3
+TKT-0031,P3,Service Desk,Desktop Support,Desktop Support,4.1
+TKT-0032,P4,Service Desk,Email & Collaboration,Email & Collaboration,1.9
+TKT-0033,P2,Service Desk,Application Development|Database Administration,Database Administration,14.7
+TKT-0034,P3,Service Desk,Desktop Support,Desktop Support,5.3
+TKT-0035,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,20.8
+TKT-0036,P3,Help Desk,Desktop Support,Desktop Support,4.8
+TKT-0037,P4,Service Desk,,Service Desk,0.6
+TKT-0038,P2,Service Desk,Application Development,Application Development,13.1
+TKT-0039,P3,Service Desk,Cloud Infrastructure,Cloud Infrastructure,8.2
+TKT-0040,P1,Service Desk,Security Operations|Identity & Access,Identity & Access,26.9
+TKT-0041,P3,Service Desk,Desktop Support,Desktop Support,3.9
+TKT-0042,P2,Service Desk,Network Operations,Network Operations,9.8
+TKT-0043,P3,Service Desk,Desktop Support|Vendor Management,Vendor Management,7.6
+TKT-0044,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,17.4
+TKT-0045,P3,Help Desk,Desktop Support,Desktop Support,5.7
+TKT-0046,P4,Service Desk,Email & Collaboration,Email & Collaboration,2.4
+TKT-0047,P2,Service Desk,Application Development,Application Development,12.9
+TKT-0048,P3,Service Desk,Desktop Support,Desktop Support,4.5
+TKT-0049,P1,Service Desk,Change Management|Cloud Infrastructure|Application Development,Application Development,36.2
+TKT-0050,P4,Service Desk,,Service Desk,0.4
+TKT-0051,P3,Service Desk,Network Operations,Network Operations,8.1
+TKT-0052,P2,Service Desk,Storage & Backup,Storage & Backup,6.3
+TKT-0053,P3,Service Desk,Desktop Support,Desktop Support,5.1
+TKT-0054,P2,Service Desk,Network Operations|Security Operations,Security Operations,14.2
+TKT-0055,P3,Help Desk,Network Operations,Network Operations,7.9
+TKT-0056,P2,Service Desk,Application Development|Database Administration,Database Administration,15.6
+TKT-0057,P3,Service Desk,Desktop Support,Desktop Support,3.4
+TKT-0058,P1,Service Desk,Security Operations|Identity & Access,Identity & Access,25.7
+TKT-0059,P4,Service Desk,Email & Collaboration,Email & Collaboration,1.7
+TKT-0060,P3,Service Desk,Cloud Infrastructure,Cloud Infrastructure,7.8
+TKT-0061,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,21.3
+TKT-0062,P3,Service Desk,Desktop Support,Desktop Support,4.3
+TKT-0063,P2,Service Desk,Application Development,Application Development,11.2
+TKT-0064,P3,Help Desk,Desktop Support,Desktop Support,5.4
+TKT-0065,P2,Service Desk,Network Operations,Network Operations,10.6
+TKT-0066,P1,Service Desk,Change Management|Application Development,Application Development,30.1
+TKT-0067,P3,Service Desk,Vendor Management,Vendor Management,6.9
+TKT-0068,P4,Service Desk,,Service Desk,0.7
+TKT-0069,P3,Service Desk,Storage & Backup,Storage & Backup,5.8
+TKT-0070,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,18.9
+TKT-0071,P3,Service Desk,Desktop Support,Desktop Support,4.6
+TKT-0072,P2,Help Desk,Network Operations,Network Operations,9.1
+TKT-0073,P3,Service Desk,Application Development|Database Administration,Database Administration,16.2
+TKT-0074,P1,Service Desk,Security Operations,Security Operations,20.5
+TKT-0075,P4,Service Desk,Desktop Support,Desktop Support,3.7
+TKT-0076,P2,Service Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,19.7
+TKT-0077,P3,Help Desk,Email & Collaboration,Email & Collaboration,3.2
+TKT-0078,P1,Service Desk,Change Management|Cloud Infrastructure|Application Development,Application Development,34.8
+TKT-0079,P3,Service Desk,Desktop Support,Desktop Support,5.0
+TKT-0080,P2,Service Desk,Application Development,Application Development,13.5

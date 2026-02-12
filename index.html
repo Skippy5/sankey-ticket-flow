@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankey Ticket Flow Analyzer</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --surface: #ffffff;
+            --border: #e0e4ea;
+            --text: #1a1a2e;
+            --text-muted: #6b7280;
+            --accent: #4f46e5;
+            --accent-hover: #4338ca;
+            --danger: #ef4444;
+            --radius: 8px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --border: #334155;
+                --text: #e2e8f0;
+                --text-muted: #94a3b8;
+                --accent: #818cf8;
+                --accent-hover: #6366f1;
+                --shadow: 0 1px 3px rgba(0,0,0,0.3);
+            }
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+        .app {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        header h1 { font-size: 1.5rem; font-weight: 700; }
+        header .subtitle { color: var(--text-muted); font-size: 0.875rem; }
+
+        /* Cards */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+        }
+
+        /* Upload Zone */
+        #drop-zone {
+            border: 2px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            background: var(--surface);
+        }
+        #drop-zone.drag-over {
+            border-color: var(--accent);
+            background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+        }
+        #drop-zone p { color: var(--text-muted); margin-top: 0.5rem; }
+        #drop-zone .icon { font-size: 2.5rem; opacity: 0.4; }
+        #file-input { display: none; }
+
+        .upload-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .link-btn {
+            background: none;
+            border: none;
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 0.875rem;
+            text-decoration: underline;
+            font-family: inherit;
+        }
+        .link-btn:hover { color: var(--accent-hover); }
+
+        /* Config Panel */
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .config-grid label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .config-grid select, .config-grid input[type="text"] {
+            padding: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        .threshold-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .threshold-row input[type="range"] {
+            flex: 1;
+            accent-color: var(--accent);
+        }
+        .threshold-row .val {
+            min-width: 3ch;
+            text-align: right;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.25rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-secondary {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { background: var(--border); }
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .stats-bar strong { color: var(--text); }
+
+        /* Chart container */
+        #chart-container {
+            overflow-x: auto;
+            min-height: 400px;
+        }
+        #chart-container svg {
+            display: block;
+            width: 100%;
+        }
+
+        /* Sankey styles */
+        .sankey-link {
+            fill: none;
+            stroke-opacity: 0.3;
+            transition: stroke-opacity 0.15s;
+        }
+        .sankey-link:hover { stroke-opacity: 0.55; }
+        .sankey-node rect {
+            stroke: var(--surface);
+            stroke-width: 1;
+            cursor: default;
+        }
+        .sankey-node text {
+            font-size: 11.5px;
+            fill: var(--text);
+            pointer-events: none;
+        }
+
+        /* Tooltip */
+        #tooltip {
+            position: fixed;
+            background: rgba(15, 23, 42, 0.92);
+            color: #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            line-height: 1.45;
+            pointer-events: none;
+            z-index: 9999;
+            max-width: 300px;
+            opacity: 0;
+            transition: opacity 0.12s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        #tooltip.visible { opacity: 1; }
+        #tooltip .tt-title { font-weight: 700; margin-bottom: 2px; }
+        #tooltip .tt-row { display: flex; justify-content: space-between; gap: 1rem; }
+        #tooltip .tt-label { opacity: 0.7; }
+
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Validation errors */
+        .error-msg {
+            color: var(--danger);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Sankey Ticket Flow</h1>
+            <span class="subtitle">Visualize ticket routing transitions</span>
+        </header>
+
+        <!-- Upload Section -->
+        <div id="upload-section" class="card">
+            <div id="drop-zone">
+                <div class="icon">&#128196;</div>
+                <p><strong>Drop CSV file here</strong> or click to browse</p>
+                <p style="font-size:0.8rem">Supports files with 50k+ rows</p>
+                <input type="file" id="file-input" accept=".csv,.tsv,.txt">
+            </div>
+            <div class="upload-actions">
+                <button class="link-btn" id="btn-sample">Load sample data</button>
+            </div>
+            <div id="upload-error" class="error-msg hidden"></div>
+        </div>
+
+        <!-- Config Section -->
+        <div id="config-section" class="card hidden">
+            <div class="config-grid">
+                <label>
+                    Open Group Column
+                    <select id="col-open"></select>
+                </label>
+                <label>
+                    Routing Groups Column
+                    <select id="col-route"></select>
+                </label>
+                <label>
+                    Closed Group Column
+                    <select id="col-close"></select>
+                </label>
+                <label>
+                    Routing Delimiter
+                    <select id="delimiter">
+                        <option value="|">Pipe ( | )</option>
+                        <option value=";">Semicolon ( ; )</option>
+                        <option value=",">Comma (requires quoted field)</option>
+                        <option value="->">Arrow ( -> )</option>
+                        <option value=">>">Double arrow ( >> )</option>
+                        <option value="~">Tilde ( ~ )</option>
+                    </select>
+                </label>
+            </div>
+            <div id="config-error" class="error-msg hidden"></div>
+            <div class="btn-group" style="margin-top:0.5rem">
+                <button class="btn btn-primary" id="btn-generate">Generate Diagram</button>
+                <button class="btn btn-secondary" id="btn-reset">New File</button>
+            </div>
+        </div>
+
+        <!-- Diagram Section -->
+        <div id="diagram-section" class="hidden">
+            <div class="card" style="padding-bottom:0.5rem">
+                <div class="stats-bar" id="stats-bar"></div>
+                <div class="config-grid" style="grid-template-columns: 1fr; margin-bottom:0.75rem;">
+                    <label>
+                        <span>Minimum Flow Threshold: <strong id="threshold-val">1</strong></span>
+                        <div class="threshold-row">
+                            <span style="font-size:0.8rem">1</span>
+                            <input type="range" id="threshold" min="1" max="100" value="1">
+                            <span id="threshold-max" style="font-size:0.8rem">100</span>
+                        </div>
+                    </label>
+                </div>
+                <div id="chart-container"></div>
+            </div>
+            <div class="btn-group" style="margin-top:0.5rem">
+                <button class="btn btn-secondary" id="btn-export">Export Links CSV</button>
+                <button class="btn btn-secondary" id="btn-reconfigure">Adjust Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script>
+    (function() {
+        'use strict';
+
+        // --- DOM refs ---
+        const $dropZone     = document.getElementById('drop-zone');
+        const $fileInput    = document.getElementById('file-input');
+        const $btnSample    = document.getElementById('btn-sample');
+        const $uploadSec    = document.getElementById('upload-section');
+        const $uploadErr    = document.getElementById('upload-error');
+        const $configSec    = document.getElementById('config-section');
+        const $configErr    = document.getElementById('config-error');
+        const $colOpen      = document.getElementById('col-open');
+        const $colRoute     = document.getElementById('col-route');
+        const $colClose     = document.getElementById('col-close');
+        const $delimiter    = document.getElementById('delimiter');
+        const $threshold    = document.getElementById('threshold');
+        const $thresholdVal = document.getElementById('threshold-val');
+        const $thresholdMax = document.getElementById('threshold-max');
+        const $btnGenerate  = document.getElementById('btn-generate');
+        const $btnReset     = document.getElementById('btn-reset');
+        const $diagramSec   = document.getElementById('diagram-section');
+        const $statsBar     = document.getElementById('stats-bar');
+        const $chart        = document.getElementById('chart-container');
+        const $btnExport    = document.getElementById('btn-export');
+        const $btnReconfig  = document.getElementById('btn-reconfigure');
+        const $tooltip      = document.getElementById('tooltip');
+
+        // --- State ---
+        let csvData = null;          // parsed rows
+        let csvHeaders = null;       // column names
+        let aggregatedLinks = null;  // all transitions before threshold
+        let currentGraph = null;     // rendered graph data
+        let totalTickets = 0;
+        let lastSkipped = 0;
+
+        // --- Color scale ---
+        const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+        // ===================================================================
+        // FILE UPLOAD
+        // ===================================================================
+        $dropZone.addEventListener('click', () => $fileInput.click());
+
+        $dropZone.addEventListener('dragover', e => {
+            e.preventDefault();
+            $dropZone.classList.add('drag-over');
+        });
+        $dropZone.addEventListener('dragleave', () => {
+            $dropZone.classList.remove('drag-over');
+        });
+        $dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            $dropZone.classList.remove('drag-over');
+            const file = e.dataTransfer.files[0];
+            if (file) loadFile(file);
+        });
+
+        $fileInput.addEventListener('change', () => {
+            if ($fileInput.files[0]) loadFile($fileInput.files[0]);
+        });
+
+        function loadFile(file) {
+            if (!file.name.match(/\.(csv|tsv|txt)$/i)) {
+                showError($uploadErr, 'Please upload a CSV file.');
+                return;
+            }
+            hideError($uploadErr);
+            Papa.parse(file, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    if (results.errors.length > 0 && results.data.length === 0) {
+                        showError($uploadErr, 'Failed to parse CSV: ' + results.errors[0].message);
+                        return;
+                    }
+                    csvData = results.data;
+                    csvHeaders = results.meta.fields;
+                    totalTickets = csvData.length;
+                    showConfig();
+                }
+            });
+        }
+
+        // ===================================================================
+        // SAMPLE DATA
+        // ===================================================================
+        $btnSample.addEventListener('click', loadSampleData);
+
+        function loadSampleData() {
+            const sampleCSV = generateSampleCSV();
+            Papa.parse(sampleCSV, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    csvData = results.data;
+                    csvHeaders = results.meta.fields;
+                    totalTickets = csvData.length;
+                    showConfig();
+                }
+            });
+        }
+
+        function generateSampleCSV() {
+            const groups = [
+                'Service Desk', 'Help Desk', 'Network Operations', 'Security Operations',
+                'Desktop Support', 'Application Development', 'Database Administration',
+                'Cloud Infrastructure', 'Identity & Access', 'Change Management',
+                'Vendor Management', 'Email & Collaboration', 'Storage & Backup'
+            ];
+            const patterns = [
+                { open: 'Service Desk', route: ['Desktop Support'], close: 'Desktop Support', weight: 18 },
+                { open: 'Service Desk', route: ['Network Operations'], close: 'Network Operations', weight: 10 },
+                { open: 'Service Desk', route: [], close: 'Service Desk', weight: 8 },
+                { open: 'Service Desk', route: ['Network Operations', 'Cloud Infrastructure'], close: 'Cloud Infrastructure', weight: 9 },
+                { open: 'Service Desk', route: ['Security Operations', 'Identity & Access'], close: 'Identity & Access', weight: 6 },
+                { open: 'Service Desk', route: ['Application Development'], close: 'Application Development', weight: 8 },
+                { open: 'Service Desk', route: ['Application Development', 'Database Administration'], close: 'Database Administration', weight: 5 },
+                { open: 'Help Desk', route: ['Desktop Support'], close: 'Desktop Support', weight: 7 },
+                { open: 'Service Desk', route: ['Email & Collaboration'], close: 'Email & Collaboration', weight: 5 },
+                { open: 'Service Desk', route: ['Cloud Infrastructure'], close: 'Cloud Infrastructure', weight: 4 },
+                { open: 'Service Desk', route: ['Storage & Backup'], close: 'Storage & Backup', weight: 4 },
+                { open: 'Service Desk', route: ['Change Management', 'Application Development'], close: 'Application Development', weight: 3 },
+                { open: 'Service Desk', route: ['Network Operations', 'Security Operations'], close: 'Security Operations', weight: 3 },
+                { open: 'Help Desk', route: ['Network Operations'], close: 'Network Operations', weight: 3 },
+                { open: 'Service Desk', route: ['Vendor Management'], close: 'Vendor Management', weight: 3 },
+                { open: 'Service Desk', route: ['Security Operations'], close: 'Security Operations', weight: 2 },
+                { open: 'Service Desk', route: ['Change Management', 'Cloud Infrastructure', 'Application Development'], close: 'Application Development', weight: 2 },
+                { open: 'Service Desk', route: ['Desktop Support', 'Vendor Management'], close: 'Vendor Management', weight: 2 },
+                { open: 'Help Desk', route: ['Email & Collaboration'], close: 'Email & Collaboration', weight: 2 },
+                { open: 'Help Desk', route: [], close: 'Help Desk', weight: 2 },
+            ];
+            const priorities = ['P1', 'P2', 'P3', 'P4'];
+            const lines = ['ticket_id,priority,open_group,routing_groups,closed_group,resolution_hours'];
+            let id = 1;
+            for (const p of patterns) {
+                for (let i = 0; i < p.weight; i++) {
+                    const pri = priorities[Math.floor(Math.random() * 4)];
+                    const hours = (Math.random() * 40 + 0.5).toFixed(1);
+                    const routing = p.route.join('|');
+                    lines.push(`TKT-${String(id++).padStart(4,'0')},${pri},${p.open},${routing},${p.close},${hours}`);
+                }
+            }
+            // Shuffle rows (keep header)
+            const header = lines[0];
+            const rows = lines.slice(1);
+            for (let i = rows.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [rows[i], rows[j]] = [rows[j], rows[i]];
+            }
+            return header + '\n' + rows.join('\n');
+        }
+
+        // ===================================================================
+        // CONFIG PANEL
+        // ===================================================================
+        function showConfig() {
+            hideError($configErr);
+            populateDropdowns();
+            autoDetectColumns();
+            $uploadSec.classList.add('hidden');
+            $configSec.classList.remove('hidden');
+            $diagramSec.classList.add('hidden');
+        }
+
+        function populateDropdowns() {
+            const selects = [$colOpen, $colRoute, $colClose];
+            for (const sel of selects) {
+                sel.innerHTML = '';
+                if (sel === $colRoute) {
+                    const opt = document.createElement('option');
+                    opt.value = '__none__';
+                    opt.textContent = '(none - direct flow)';
+                    sel.appendChild(opt);
+                }
+                for (const h of csvHeaders) {
+                    const opt = document.createElement('option');
+                    opt.value = h;
+                    opt.textContent = h;
+                    sel.appendChild(opt);
+                }
+            }
+        }
+
+        function autoDetectColumns() {
+            const openRe  = /\b(open|origin|source|start|creat|initial|from|assign.*group|opened)\b/i;
+            const routeRe = /\b(rout|path|transfer|escalat|middle|via|through|intermediate|handoff|hop)\b/i;
+            const closeRe = /\b(clos|resolv|end|finish|final|dest|target|complet|resolved)\b/i;
+            let foundOpen = false, foundRoute = false, foundClose = false;
+            for (const h of csvHeaders) {
+                if (!foundOpen && openRe.test(h))  { $colOpen.value = h; foundOpen = true; }
+                if (!foundRoute && routeRe.test(h)) { $colRoute.value = h; foundRoute = true; }
+                if (!foundClose && closeRe.test(h)) { $colClose.value = h; foundClose = true; }
+            }
+            // Fallback: if we have exactly 3 or fewer non-id-like columns, map by position
+            if (!foundOpen && !foundRoute && !foundClose) {
+                const candidates = csvHeaders.filter(h => !/\b(id|key|number|#|priority|time|hour|date|min)\b/i.test(h));
+                if (candidates.length >= 2) {
+                    $colOpen.value = candidates[0];
+                    if (candidates.length >= 3) {
+                        $colRoute.value = candidates[1];
+                        $colClose.value = candidates[2];
+                    } else {
+                        $colRoute.value = '__none__';
+                        $colClose.value = candidates[1];
+                    }
+                }
+            }
+        }
+
+        // ===================================================================
+        // DATA PROCESSING
+        // ===================================================================
+        function buildPath(row) {
+            const openCol  = $colOpen.value;
+            const routeCol = $colRoute.value;
+            const closeCol = $colClose.value;
+            const delim    = $delimiter.value;
+
+            const path = [];
+            const openVal = (row[openCol] || '').trim();
+            if (openVal) path.push(openVal);
+
+            if (routeCol !== '__none__') {
+                const routeVal = (row[routeCol] || '').trim();
+                if (routeVal) {
+                    const parts = routeVal.split(delim).map(s => s.trim()).filter(Boolean);
+                    path.push(...parts);
+                }
+            }
+
+            const closeVal = (row[closeCol] || '').trim();
+            if (closeVal) path.push(closeVal);
+
+            // Collapse consecutive duplicates
+            const collapsed = [];
+            for (const g of path) {
+                if (collapsed.length === 0 || collapsed[collapsed.length - 1] !== g) {
+                    collapsed.push(g);
+                }
+            }
+            return collapsed;
+        }
+
+        function aggregateTransitions() {
+            const transitions = new Map();
+            let skipped = 0;
+
+            for (const row of csvData) {
+                const path = buildPath(row);
+                if (path.length < 2) { skipped++; continue; }
+                for (let i = 0; i < path.length - 1; i++) {
+                    const key = path[i] + '\x00' + path[i + 1];
+                    transitions.set(key, (transitions.get(key) || 0) + 1);
+                }
+            }
+
+            const links = [];
+            for (const [key, value] of transitions) {
+                const [source, target] = key.split('\x00');
+                links.push({ source, target, value });
+            }
+            links.sort((a, b) => b.value - a.value);
+            return { links, skipped };
+        }
+
+        // ===================================================================
+        // CYCLE BREAKING
+        // ===================================================================
+        function breakCycles(nodes, links) {
+            // Build adjacency for cycle detection
+            const adj = new Map();
+            for (const link of links) {
+                if (!adj.has(link.source)) adj.set(link.source, []);
+                adj.get(link.source).push(link.target);
+            }
+
+            const WHITE = 0, GRAY = 1, BLACK = 2;
+            const color = new Map();
+            const backEdges = new Set();
+
+            function dfs(node) {
+                color.set(node, GRAY);
+                for (const nb of (adj.get(node) || [])) {
+                    const c = color.get(nb);
+                    if (c === GRAY) {
+                        backEdges.add(node + '\x00' + nb);
+                    } else if (c === undefined || c === WHITE) {
+                        dfs(nb);
+                    }
+                }
+                color.set(node, BLACK);
+            }
+
+            const allNodes = new Set(nodes.map(n => n.name));
+            for (const n of allNodes) {
+                if (!color.has(n)) dfs(n);
+            }
+
+            if (backEdges.size === 0) return { nodes, links };
+
+            const newNodes = nodes.map(n => ({ ...n }));
+            const newLinks = links.map(link => {
+                const key = link.source + '\x00' + link.target;
+                if (backEdges.has(key)) {
+                    const returnName = link.target + ' \u21a9';
+                    if (!newNodes.find(n => n.name === returnName)) {
+                        newNodes.push({
+                            name: returnName,
+                            displayName: link.target,
+                            isReturn: true
+                        });
+                    }
+                    return { ...link, target: returnName };
+                }
+                return { ...link };
+            });
+
+            return { nodes: newNodes, links: newLinks };
+        }
+
+        // ===================================================================
+        // GENERATE
+        // ===================================================================
+        $btnGenerate.addEventListener('click', generate);
+
+        function generate() {
+            hideError($configErr);
+
+            // Validate
+            const openCol  = $colOpen.value;
+            const closeCol = $colClose.value;
+            if (!openCol || !closeCol) {
+                showError($configErr, 'Please select Open Group and Closed Group columns.');
+                return;
+            }
+            if (openCol === closeCol) {
+                showError($configErr, 'Open and Closed columns must be different.');
+                return;
+            }
+
+            const { links, skipped } = aggregateTransitions();
+            if (links.length === 0) {
+                showError($configErr, 'No valid transitions found. Check column mapping and delimiter.');
+                return;
+            }
+
+            aggregatedLinks = links;
+            lastSkipped = skipped;
+
+            // Set threshold slider range
+            const maxVal = links[0].value;
+            $threshold.max = Math.max(maxVal, 2);
+            $threshold.value = 1;
+            $thresholdVal.textContent = '1';
+            $thresholdMax.textContent = $threshold.max;
+
+            $configSec.classList.add('hidden');
+            $diagramSec.classList.remove('hidden');
+
+            renderWithThreshold();
+        }
+
+        function renderWithThreshold() {
+            const thresh = parseInt($threshold.value);
+
+            // Filter by threshold
+            let filtered = aggregatedLinks.filter(l => l.value >= thresh);
+            if (filtered.length === 0) {
+                $chart.innerHTML = '<p style="padding:2rem;color:var(--text-muted)">No flows meet the threshold. Lower the minimum flow value.</p>';
+                $statsBar.innerHTML = '';
+                return;
+            }
+
+            // Build node list
+            const nodeSet = new Set();
+            for (const l of filtered) {
+                nodeSet.add(l.source);
+                nodeSet.add(l.target);
+            }
+            let nodes = Array.from(nodeSet).map(name => ({ name, displayName: name }));
+
+            // Break cycles
+            const result = breakCycles(nodes, filtered);
+            nodes = result.nodes;
+            filtered = result.links;
+
+            // Update stats
+            const uniqueGroups = new Set();
+            for (const n of nodes) uniqueGroups.add(n.displayName || n.name);
+            const skippedHtml = lastSkipped ? `<span style="color:var(--danger)">${lastSkipped} rows skipped</span>` : '';
+            const cycleHtml = result.nodes.some(n => n.isReturn) ? '<span title="Some circular flows were detected and shown with return nodes">Cycles detected</span>' : '';
+            $statsBar.innerHTML = `
+                <span><strong>${totalTickets.toLocaleString()}</strong> tickets</span>
+                <span><strong>${uniqueGroups.size}</strong> groups</span>
+                <span><strong>${filtered.length}</strong> transitions</span>
+                <span><strong>${filtered.reduce((s, l) => s + l.value, 0).toLocaleString()}</strong> total flow</span>
+                ${skippedHtml}${cycleHtml}
+            `;
+
+            renderSankey(nodes, filtered);
+        }
+
+        // ===================================================================
+        // SANKEY RENDERING
+        // ===================================================================
+        function renderSankey(nodes, links) {
+            $chart.innerHTML = '';
+
+            // Build index maps
+            const nodeIndex = new Map();
+            nodes.forEach((n, i) => nodeIndex.set(n.name, i));
+
+            const sankeyNodes = nodes.map(n => ({
+                name: n.name,
+                displayName: n.displayName || n.name,
+                isReturn: n.isReturn || false
+            }));
+            const sankeyLinks = links.map(l => ({
+                source: nodeIndex.get(l.source),
+                target: nodeIndex.get(l.target),
+                value: l.value
+            }));
+
+            const containerWidth = $chart.clientWidth || 900;
+            const nodeCount = sankeyNodes.length;
+            const height = Math.max(480, nodeCount * 32);
+            const margin = { top: 12, right: 160, bottom: 12, left: 12 };
+            const width = containerWidth;
+
+            const sankey = d3.sankey()
+                .nodeWidth(18)
+                .nodePadding(14)
+                .nodeAlign(d3.sankeyLeft)
+                .extent([
+                    [margin.left, margin.top],
+                    [width - margin.right, height - margin.bottom]
+                ]);
+
+            const graph = sankey({
+                nodes: sankeyNodes,
+                links: sankeyLinks
+            });
+            currentGraph = graph;
+
+            const svg = d3.select($chart)
+                .append('svg')
+                .attr('viewBox', `0 0 ${width} ${height}`)
+                .attr('width', width)
+                .attr('height', height);
+
+            const defs = svg.append('defs');
+
+            // Gradients for links
+            graph.links.forEach((link, i) => {
+                const grad = defs.append('linearGradient')
+                    .attr('id', `lg-${i}`)
+                    .attr('gradientUnits', 'userSpaceOnUse')
+                    .attr('x1', link.source.x1)
+                    .attr('y1', link.y0)
+                    .attr('x2', link.target.x0)
+                    .attr('y2', link.y1);
+                grad.append('stop')
+                    .attr('offset', '0%')
+                    .attr('stop-color', colorScale(link.source.displayName));
+                grad.append('stop')
+                    .attr('offset', '100%')
+                    .attr('stop-color', colorScale(link.target.displayName));
+            });
+
+            // Render links
+            const totalFlow = graph.links.reduce((s, l) => s + l.value, 0);
+
+            svg.append('g')
+                .selectAll('.sankey-link')
+                .data(graph.links)
+                .join('path')
+                .attr('class', 'sankey-link')
+                .attr('d', d3.sankeyLinkHorizontal())
+                .attr('stroke', (d, i) => `url(#lg-${i})`)
+                .attr('stroke-width', d => Math.max(1.5, d.width))
+                .on('mouseenter', (event, d) => {
+                    const pct = ((d.value / totalFlow) * 100).toFixed(1);
+                    showTooltip(event, `
+                        <div class="tt-title">${esc(d.source.displayName)} &rarr; ${esc(d.target.displayName)}</div>
+                        <div class="tt-row"><span class="tt-label">Flow</span><span>${d.value.toLocaleString()} tickets</span></div>
+                        <div class="tt-row"><span class="tt-label">Share</span><span>${pct}% of total</span></div>
+                    `);
+                })
+                .on('mousemove', moveTooltip)
+                .on('mouseleave', hideTooltip);
+
+            // Render nodes
+            const nodeG = svg.append('g')
+                .selectAll('.sankey-node')
+                .data(graph.nodes)
+                .join('g')
+                .attr('class', 'sankey-node');
+
+            nodeG.append('rect')
+                .attr('x', d => d.x0)
+                .attr('y', d => d.y0)
+                .attr('width', d => d.x1 - d.x0)
+                .attr('height', d => Math.max(1, d.y1 - d.y0))
+                .attr('fill', d => {
+                    const c = colorScale(d.displayName);
+                    return d.isReturn ? d3.color(c).darker(0.5) : c;
+                })
+                .attr('rx', 2)
+                .on('mouseenter', (event, d) => {
+                    const inFlow = d.targetLinks.reduce((s, l) => s + l.value, 0);
+                    const outFlow = d.sourceLinks.reduce((s, l) => s + l.value, 0);
+                    showTooltip(event, `
+                        <div class="tt-title">${esc(d.displayName)}${d.isReturn ? ' (return)' : ''}</div>
+                        <div class="tt-row"><span class="tt-label">Inbound</span><span>${inFlow.toLocaleString()}</span></div>
+                        <div class="tt-row"><span class="tt-label">Outbound</span><span>${outFlow.toLocaleString()}</span></div>
+                    `);
+                })
+                .on('mousemove', moveTooltip)
+                .on('mouseleave', hideTooltip);
+
+            // Labels
+            nodeG.append('text')
+                .attr('x', d => d.x0 < width / 2 ? d.x1 + 8 : d.x0 - 8)
+                .attr('y', d => (d.y0 + d.y1) / 2)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', d => d.x0 < width / 2 ? 'start' : 'end')
+                .text(d => {
+                    const label = d.displayName;
+                    const total = Math.max(
+                        d.targetLinks.reduce((s, l) => s + l.value, 0),
+                        d.sourceLinks.reduce((s, l) => s + l.value, 0)
+                    );
+                    return `${label} (${total.toLocaleString()})`;
+                })
+                .style('font-size', '11.5px')
+                .style('fill', 'var(--text)');
+        }
+
+        // ===================================================================
+        // TOOLTIP
+        // ===================================================================
+        function showTooltip(event, html) {
+            $tooltip.innerHTML = html;
+            $tooltip.classList.add('visible');
+            moveTooltip(event);
+        }
+        function moveTooltip(event) {
+            const pad = 14;
+            let x = event.clientX + pad;
+            let y = event.clientY + pad;
+            const rect = $tooltip.getBoundingClientRect();
+            if (x + rect.width > window.innerWidth - pad) x = event.clientX - rect.width - pad;
+            if (y + rect.height > window.innerHeight - pad) y = event.clientY - rect.height - pad;
+            $tooltip.style.left = x + 'px';
+            $tooltip.style.top = y + 'px';
+        }
+        function hideTooltip() {
+            $tooltip.classList.remove('visible');
+        }
+
+        function esc(str) {
+            const el = document.createElement('span');
+            el.textContent = str;
+            return el.innerHTML;
+        }
+
+        // ===================================================================
+        // THRESHOLD LIVE UPDATE
+        // ===================================================================
+        let thresholdTimer = null;
+        $threshold.addEventListener('input', () => {
+            $thresholdVal.textContent = $threshold.value;
+            clearTimeout(thresholdTimer);
+            thresholdTimer = setTimeout(() => {
+                if (aggregatedLinks) renderWithThreshold();
+            }, 120);
+        });
+
+        // ===================================================================
+        // EXPORT
+        // ===================================================================
+        $btnExport.addEventListener('click', () => {
+            if (!aggregatedLinks) return;
+            const thresh = parseInt($threshold.value);
+            const filtered = aggregatedLinks.filter(l => l.value >= thresh);
+            const csvLines = ['source,target,flow_count'];
+            for (const l of filtered) {
+                csvLines.push(`"${l.source}","${l.target}",${l.value}`);
+            }
+            downloadCSV(csvLines.join('\n'), 'ticket-flow-links.csv');
+        });
+
+        function downloadCSV(content, filename) {
+            const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // ===================================================================
+        // NAVIGATION
+        // ===================================================================
+        $btnReset.addEventListener('click', resetAll);
+        $btnReconfig.addEventListener('click', () => {
+            $diagramSec.classList.add('hidden');
+            $configSec.classList.remove('hidden');
+        });
+
+        function resetAll() {
+            csvData = null;
+            csvHeaders = null;
+            aggregatedLinks = null;
+            currentGraph = null;
+            $chart.innerHTML = '';
+            $configSec.classList.add('hidden');
+            $diagramSec.classList.add('hidden');
+            $uploadSec.classList.remove('hidden');
+            $fileInput.value = '';
+            hideError($uploadErr);
+            hideError($configErr);
+        }
+
+        // ===================================================================
+        // RESPONSIVE
+        // ===================================================================
+        let resizeTimer = null;
+        const resizeObserver = new ResizeObserver(() => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (aggregatedLinks && !$diagramSec.classList.contains('hidden')) {
+                    renderWithThreshold();
+                }
+            }, 200);
+        });
+        resizeObserver.observe($chart);
+
+        // ===================================================================
+        // HELPERS
+        // ===================================================================
+        function showError(el, msg) {
+            el.textContent = msg;
+            el.classList.remove('hidden');
+        }
+        function hideError(el) {
+            el.textContent = '';
+            el.classList.add('hidden');
+        }
+
+    })();
+    </script>
+</body>
+</html>
