@@ -1,0 +1,1001 @@
+ticket_id,priority,open_group,routing_groups,closed_group,resolution_hours
+TKT-0001,P3,Service Desk,,Service Desk,0.6
+TKT-0002,P2,Security Operations,Database Administration|Identity & Access|Network Operations,Network Operations,22.3
+TKT-0003,P4,Service Desk,,Service Desk,0.0
+TKT-0004,P2,Service Desk,Email & Collaboration,Email & Collaboration,16.8
+TKT-0005,P3,Security Operations,,Security Operations,1.8
+TKT-0006,P3,Network Operations,Cloud Infrastructure|Application Development,Application Development,13.3
+TKT-0007,P2,Network Operations,Desktop Support|Cloud Infrastructure,Cloud Infrastructure,22.9
+TKT-0008,P4,Help Desk,Telephony,Telephony,5.4
+TKT-0009,P4,Help Desk,,Help Desk,0.3
+TKT-0010,P3,Network Operations,Email & Collaboration,Email & Collaboration,12.0
+TKT-0011,P2,Security Operations,Application Development|Email & Collaboration|Storage & Backup,Storage & Backup,23.9
+TKT-0012,P1,Service Desk,Cloud Infrastructure|Database Administration,Database Administration,34.6
+TKT-0013,P3,Security Operations,Identity & Access|Application Development,Application Development,12.3
+TKT-0014,P1,Service Desk,Network Operations,Network Operations,28.7
+TKT-0015,P2,Network Operations,Database Administration|Desktop Support,Desktop Support,18.6
+TKT-0016,P2,Help Desk,Security Operations,Security Operations,19.6
+TKT-0017,P4,Security Operations,Application Development,Application Development,6.1
+TKT-0018,P1,Service Desk,Identity & Access|Desktop Support,Desktop Support,31.8
+TKT-0019,P4,Service Desk,,Service Desk,0.5
+TKT-0020,P4,Security Operations,Telephony|Identity & Access,Identity & Access,8.5
+TKT-0021,P3,Security Operations,,Security Operations,1.7
+TKT-0022,P3,Service Desk,Email & Collaboration|Identity & Access,Identity & Access,12.5
+TKT-0023,P4,Service Desk,,Service Desk,1.1
+TKT-0024,P1,Network Operations,Application Development|Network Operations,Network Operations,32.8
+TKT-0025,P2,Service Desk,Email & Collaboration,Email & Collaboration,19.0
+TKT-0026,P3,Service Desk,,Service Desk,0.4
+TKT-0027,P3,Security Operations,Email & Collaboration,Email & Collaboration,11.5
+TKT-0028,P1,Network Operations,Storage & Backup|Database Administration|Telephony,Telephony,34.5
+TKT-0029,P4,Service Desk,Security Operations|Cloud Infrastructure,Cloud Infrastructure,11.9
+TKT-0030,P1,Help Desk,Identity & Access|Desktop Support,Desktop Support,30.4
+TKT-0031,P2,Network Operations,Application Development|Desktop Support|Security Operations,Security Operations,23.1
+TKT-0032,P2,Help Desk,,Help Desk,1.7
+TKT-0033,P1,Help Desk,Security Operations,Security Operations,27.4
+TKT-0034,P1,Help Desk,Application Development|Desktop Support,Desktop Support,31.6
+TKT-0035,P4,Network Operations,,Network Operations,1.0
+TKT-0036,P2,Network Operations,Desktop Support|Network Operations,Network Operations,21.2
+TKT-0037,P4,Help Desk,,Help Desk,1.0
+TKT-0038,P4,Help Desk,,Help Desk,0.8
+TKT-0039,P4,Help Desk,,Help Desk,1.7
+TKT-0040,P1,Security Operations,Identity & Access,Identity & Access,31.1
+TKT-0041,P4,Security Operations,Security Operations|Telephony|Network Operations,Network Operations,15.9
+TKT-0042,P4,Security Operations,,Security Operations,1.4
+TKT-0043,P4,Network Operations,,Network Operations,1.6
+TKT-0044,P3,Service Desk,Telephony|Identity & Access|Database Administration,Database Administration,15.3
+TKT-0045,P3,Network Operations,,Network Operations,1.9
+TKT-0046,P3,Security Operations,,Security Operations,1.6
+TKT-0047,P1,Help Desk,Email & Collaboration,Email & Collaboration,31.2
+TKT-0048,P1,Network Operations,Cloud Infrastructure|Security Operations,Security Operations,33.7
+TKT-0049,P4,Network Operations,,Network Operations,1.7
+TKT-0050,P4,Service Desk,,Service Desk,0.2
+TKT-0051,P2,Network Operations,,Network Operations,0.6
+TKT-0052,P3,Network Operations,,Network Operations,0.8
+TKT-0053,P2,Service Desk,Network Operations|Security Operations|Email & Collaboration,Email & Collaboration,22.3
+TKT-0054,P4,Help Desk,,Help Desk,0.7
+TKT-0055,P3,Security Operations,,Security Operations,0.9
+TKT-0056,P2,Security Operations,Network Operations,Network Operations,20.0
+TKT-0057,P3,Network Operations,,Network Operations,0.4
+TKT-0058,P1,Security Operations,Email & Collaboration|Desktop Support|Telephony,Telephony,37.0
+TKT-0059,P4,Security Operations,,Security Operations,1.0
+TKT-0060,P1,Service Desk,Security Operations|Database Administration|Cloud Infrastructure,Cloud Infrastructure,34.2
+TKT-0061,P4,Help Desk,,Help Desk,0.2
+TKT-0062,P2,Network Operations,Storage & Backup,Storage & Backup,19.6
+TKT-0063,P3,Network Operations,Desktop Support|Storage & Backup|Security Operations,Security Operations,16.7
+TKT-0064,P4,Service Desk,,Service Desk,0.6
+TKT-0065,P1,Service Desk,,Service Desk,1.1
+TKT-0066,P4,Security Operations,,Security Operations,1.8
+TKT-0067,P3,Help Desk,Application Development,Application Development,11.6
+TKT-0068,P2,Security Operations,Database Administration|Storage & Backup|Desktop Support,Desktop Support,23.6
+TKT-0069,P4,Network Operations,,Network Operations,0.9
+TKT-0070,P3,Network Operations,,Network Operations,1.4
+TKT-0071,P4,Help Desk,Security Operations|Cloud Infrastructure|Telephony,Telephony,11.2
+TKT-0072,P4,Security Operations,,Security Operations,1.1
+TKT-0073,P3,Security Operations,,Security Operations,1.0
+TKT-0074,P3,Security Operations,Identity & Access|Email & Collaboration|Security Operations,Security Operations,19.5
+TKT-0075,P1,Security Operations,Identity & Access|Telephony|Network Operations,Network Operations,35.3
+TKT-0076,P3,Service Desk,Telephony|Identity & Access|Security Operations,Security Operations,17.5
+TKT-0077,P4,Security Operations,,Security Operations,0.1
+TKT-0078,P4,Network Operations,Identity & Access,Identity & Access,8.1
+TKT-0079,P4,Help Desk,,Help Desk,1.2
+TKT-0080,P3,Service Desk,Database Administration|Application Development|Cloud Infrastructure,Cloud Infrastructure,15.5
+TKT-0081,P2,Help Desk,Storage & Backup|Identity & Access,Identity & Access,22.1
+TKT-0082,P1,Help Desk,Database Administration|Identity & Access,Identity & Access,34.3
+TKT-0083,P2,Service Desk,Cloud Infrastructure|Network Operations|Security Operations,Security Operations,25.1
+TKT-0084,P2,Help Desk,Security Operations|Application Development,Application Development,20.7
+TKT-0085,P1,Service Desk,Database Administration|Identity & Access|Desktop Support,Desktop Support,34.1
+TKT-0086,P3,Security Operations,Application Development,Application Development,10.1
+TKT-0087,P1,Help Desk,Database Administration,Database Administration,29.7
+TKT-0088,P1,Security Operations,Database Administration|Email & Collaboration|Application Development,Application Development,36.2
+TKT-0089,P2,Help Desk,Desktop Support,Desktop Support,16.1
+TKT-0090,P4,Network Operations,,Network Operations,1.9
+TKT-0091,P4,Service Desk,Application Development,Application Development,7.4
+TKT-0092,P2,Service Desk,Application Development|Security Operations,Security Operations,18.2
+TKT-0093,P1,Service Desk,Database Administration|Security Operations|Network Operations,Network Operations,37.1
+TKT-0094,P4,Security Operations,,Security Operations,1.4
+TKT-0095,P3,Help Desk,Email & Collaboration|Desktop Support|Storage & Backup,Storage & Backup,18.3
+TKT-0096,P1,Security Operations,Network Operations|Email & Collaboration|Identity & Access,Identity & Access,34.2
+TKT-0097,P1,Network Operations,Security Operations|Network Operations,Network Operations,30.9
+TKT-0098,P4,Service Desk,,Service Desk,0.9
+TKT-0099,P2,Help Desk,Network Operations|Security Operations,Security Operations,21.4
+TKT-0100,P3,Network Operations,Identity & Access,Identity & Access,10.1
+TKT-0101,P4,Service Desk,,Service Desk,0.7
+TKT-0102,P4,Help Desk,,Help Desk,0.5
+TKT-0103,P1,Service Desk,Telephony|Database Administration,Database Administration,32.6
+TKT-0104,P3,Network Operations,Desktop Support|Email & Collaboration,Email & Collaboration,12.3
+TKT-0105,P3,Service Desk,Email & Collaboration|Network Operations|Storage & Backup,Storage & Backup,15.6
+TKT-0106,P2,Network Operations,Email & Collaboration|Storage & Backup,Storage & Backup,21.6
+TKT-0107,P1,Security Operations,,Security Operations,0.2
+TKT-0108,P4,Service Desk,,Service Desk,0.9
+TKT-0109,P2,Network Operations,Security Operations,Security Operations,17.9
+TKT-0110,P3,Network Operations,,Network Operations,0.6
+TKT-0111,P4,Security Operations,,Security Operations,0.1
+TKT-0112,P4,Network Operations,,Network Operations,0.4
+TKT-0113,P4,Help Desk,,Help Desk,0.5
+TKT-0114,P4,Network Operations,Security Operations,Security Operations,5.7
+TKT-0115,P2,Security Operations,Identity & Access|Email & Collaboration|Database Administration,Database Administration,24.1
+TKT-0116,P2,Help Desk,Identity & Access|Network Operations|Cloud Infrastructure,Cloud Infrastructure,25.0
+TKT-0117,P1,Security Operations,Storage & Backup|Application Development|Identity & Access,Identity & Access,37.6
+TKT-0118,P2,Service Desk,Storage & Backup,Storage & Backup,17.4
+TKT-0119,P1,Service Desk,Identity & Access|Telephony|Email & Collaboration,Email & Collaboration,34.6
+TKT-0120,P3,Network Operations,Network Operations|Cloud Infrastructure|Telephony,Telephony,17.4
+TKT-0121,P1,Network Operations,Identity & Access|Application Development,Application Development,33.6
+TKT-0122,P4,Network Operations,,Network Operations,1.8
+TKT-0123,P4,Service Desk,,Service Desk,1.9
+TKT-0124,P1,Security Operations,Telephony|Identity & Access,Identity & Access,34.1
+TKT-0125,P1,Security Operations,,Security Operations,1.2
+TKT-0126,P1,Network Operations,Telephony,Telephony,28.9
+TKT-0127,P2,Help Desk,Database Administration,Database Administration,16.1
+TKT-0128,P1,Service Desk,Identity & Access|Storage & Backup|Email & Collaboration,Email & Collaboration,37.7
+TKT-0129,P1,Network Operations,Cloud Infrastructure|Email & Collaboration|Application Development,Application Development,36.7
+TKT-0130,P4,Help Desk,,Help Desk,1.1
+TKT-0131,P2,Help Desk,Desktop Support|Storage & Backup,Storage & Backup,20.9
+TKT-0132,P3,Network Operations,Email & Collaboration,Email & Collaboration,12.0
+TKT-0133,P1,Help Desk,Email & Collaboration,Email & Collaboration,27.1
+TKT-0134,P3,Network Operations,Identity & Access,Identity & Access,12.9
+TKT-0135,P3,Help Desk,Cloud Infrastructure,Cloud Infrastructure,10.9
+TKT-0136,P1,Service Desk,Database Administration|Identity & Access|Telephony,Telephony,33.8
+TKT-0137,P1,Security Operations,Application Development|Cloud Infrastructure|Database Administration,Database Administration,33.8
+TKT-0138,P1,Help Desk,Database Administration|Storage & Backup|Telephony,Telephony,34.6
+TKT-0139,P1,Help Desk,Telephony,Telephony,29.7
+TKT-0140,P1,Help Desk,Network Operations|Security Operations|Database Administration,Database Administration,37.3
+TKT-0141,P1,Service Desk,Desktop Support|Database Administration|Cloud Infrastructure,Cloud Infrastructure,35.0
+TKT-0142,P1,Help Desk,Desktop Support|Telephony|Application Development,Application Development,36.4
+TKT-0143,P3,Security Operations,Identity & Access|Desktop Support|Email & Collaboration,Email & Collaboration,19.1
+TKT-0144,P4,Service Desk,Network Operations,Network Operations,7.3
+TKT-0145,P2,Service Desk,Security Operations|Application Development,Application Development,18.7
+TKT-0146,P3,Security Operations,,Security Operations,0.9
+TKT-0147,P2,Security Operations,Identity & Access,Identity & Access,15.6
+TKT-0148,P1,Service Desk,Desktop Support,Desktop Support,29.9
+TKT-0149,P3,Help Desk,Storage & Backup|Database Administration|Cloud Infrastructure,Cloud Infrastructure,16.9
+TKT-0150,P4,Help Desk,,Help Desk,0.9
+TKT-0151,P2,Service Desk,,Service Desk,1.6
+TKT-0152,P3,Network Operations,Database Administration,Database Administration,11.6
+TKT-0153,P4,Security Operations,Telephony|Storage & Backup|Desktop Support,Desktop Support,14.6
+TKT-0154,P1,Security Operations,Database Administration,Database Administration,31.2
+TKT-0155,P1,Network Operations,,Network Operations,1.2
+TKT-0156,P4,Network Operations,Cloud Infrastructure|Database Administration|Telephony,Telephony,11.6
+TKT-0157,P1,Help Desk,Desktop Support|Telephony|Application Development,Application Development,34.6
+TKT-0158,P3,Help Desk,,Help Desk,1.4
+TKT-0159,P2,Security Operations,Email & Collaboration|Network Operations|Cloud Infrastructure,Cloud Infrastructure,24.0
+TKT-0160,P1,Help Desk,Security Operations|Desktop Support|Network Operations,Network Operations,36.9
+TKT-0161,P4,Service Desk,,Service Desk,0.8
+TKT-0162,P1,Help Desk,Database Administration|Identity & Access,Identity & Access,30.9
+TKT-0163,P1,Service Desk,Security Operations|Cloud Infrastructure|Desktop Support,Desktop Support,33.3
+TKT-0164,P3,Help Desk,,Help Desk,1.8
+TKT-0165,P4,Network Operations,Desktop Support|Network Operations,Network Operations,10.9
+TKT-0166,P3,Help Desk,Email & Collaboration|Telephony,Telephony,16.4
+TKT-0167,P3,Security Operations,,Security Operations,1.9
+TKT-0168,P1,Help Desk,Email & Collaboration,Email & Collaboration,29.1
+TKT-0169,P2,Help Desk,,Help Desk,1.4
+TKT-0170,P1,Network Operations,Desktop Support,Desktop Support,31.3
+TKT-0171,P3,Security Operations,Security Operations|Identity & Access,Identity & Access,16.2
+TKT-0172,P2,Network Operations,Identity & Access|Desktop Support,Desktop Support,21.7
+TKT-0173,P3,Service Desk,Database Administration|Security Operations|Application Development,Application Development,18.0
+TKT-0174,P4,Service Desk,Storage & Backup|Telephony,Telephony,10.5
+TKT-0175,P3,Network Operations,Network Operations|Storage & Backup|Email & Collaboration,Email & Collaboration,17.0
+TKT-0176,P3,Network Operations,Desktop Support|Security Operations,Security Operations,12.4
+TKT-0177,P2,Security Operations,Telephony,Telephony,19.5
+TKT-0178,P3,Help Desk,,Help Desk,0.4
+TKT-0179,P4,Security Operations,,Security Operations,0.2
+TKT-0180,P1,Security Operations,,Security Operations,1.2
+TKT-0181,P2,Network Operations,Network Operations|Desktop Support,Desktop Support,21.6
+TKT-0182,P2,Service Desk,Email & Collaboration,Email & Collaboration,18.3
+TKT-0183,P3,Security Operations,,Security Operations,1.7
+TKT-0184,P1,Service Desk,Telephony|Cloud Infrastructure,Cloud Infrastructure,34.8
+TKT-0185,P1,Service Desk,Storage & Backup|Application Development|Email & Collaboration,Email & Collaboration,36.0
+TKT-0186,P3,Network Operations,Storage & Backup|Network Operations|Email & Collaboration,Email & Collaboration,19.7
+TKT-0187,P3,Network Operations,Network Operations|Identity & Access|Desktop Support,Desktop Support,17.6
+TKT-0188,P1,Service Desk,Security Operations|Telephony|Network Operations,Network Operations,36.4
+TKT-0189,P3,Help Desk,,Help Desk,0.3
+TKT-0190,P2,Network Operations,Network Operations|Identity & Access,Identity & Access,21.8
+TKT-0191,P1,Service Desk,Application Development,Application Development,28.8
+TKT-0192,P2,Service Desk,Identity & Access|Cloud Infrastructure,Cloud Infrastructure,19.4
+TKT-0193,P4,Help Desk,Identity & Access,Identity & Access,6.9
+TKT-0194,P2,Help Desk,Database Administration|Application Development,Application Development,20.1
+TKT-0195,P1,Service Desk,Cloud Infrastructure|Identity & Access|Telephony,Telephony,33.2
+TKT-0196,P2,Help Desk,Email & Collaboration|Application Development|Identity & Access,Identity & Access,25.2
+TKT-0197,P4,Help Desk,,Help Desk,1.1
+TKT-0198,P3,Service Desk,Email & Collaboration|Application Development|Telephony,Telephony,19.8
+TKT-0199,P4,Service Desk,Network Operations,Network Operations,8.3
+TKT-0200,P2,Service Desk,Telephony|Database Administration,Database Administration,18.5
+TKT-0201,P1,Service Desk,Identity & Access|Database Administration,Database Administration,32.4
+TKT-0202,P2,Security Operations,Security Operations|Email & Collaboration,Email & Collaboration,20.6
+TKT-0203,P2,Network Operations,Email & Collaboration|Cloud Infrastructure|Storage & Backup,Storage & Backup,22.9
+TKT-0204,P2,Security Operations,,Security Operations,2.0
+TKT-0205,P4,Service Desk,,Service Desk,1.0
+TKT-0206,P1,Network Operations,Cloud Infrastructure|Desktop Support,Desktop Support,34.3
+TKT-0207,P1,Security Operations,Application Development|Desktop Support|Email & Collaboration,Email & Collaboration,34.0
+TKT-0208,P2,Network Operations,Database Administration,Database Administration,17.2
+TKT-0209,P3,Security Operations,,Security Operations,1.2
+TKT-0210,P1,Service Desk,Telephony,Telephony,30.8
+TKT-0211,P3,Help Desk,Cloud Infrastructure|Identity & Access,Identity & Access,13.3
+TKT-0212,P4,Service Desk,Application Development,Application Development,5.4
+TKT-0213,P3,Network Operations,Security Operations|Network Operations,Network Operations,13.6
+TKT-0214,P4,Security Operations,,Security Operations,1.8
+TKT-0215,P4,Network Operations,Network Operations|Database Administration|Telephony,Telephony,13.3
+TKT-0216,P4,Network Operations,,Network Operations,0.8
+TKT-0217,P3,Service Desk,,Service Desk,0.7
+TKT-0218,P3,Network Operations,,Network Operations,1.4
+TKT-0219,P4,Help Desk,Network Operations|Security Operations,Security Operations,11.6
+TKT-0220,P1,Network Operations,Identity & Access|Storage & Backup,Storage & Backup,34.5
+TKT-0221,P1,Network Operations,Security Operations|Telephony,Telephony,32.4
+TKT-0222,P4,Service Desk,,Service Desk,1.9
+TKT-0223,P3,Help Desk,Security Operations|Storage & Backup|Identity & Access,Identity & Access,19.0
+TKT-0224,P4,Network Operations,,Network Operations,0.9
+TKT-0225,P1,Service Desk,Identity & Access|Desktop Support,Desktop Support,30.1
+TKT-0226,P3,Help Desk,Database Administration,Database Administration,10.2
+TKT-0227,P1,Network Operations,Database Administration|Telephony,Telephony,30.1
+TKT-0228,P3,Network Operations,Security Operations|Database Administration|Storage & Backup,Storage & Backup,18.1
+TKT-0229,P1,Network Operations,Telephony|Cloud Infrastructure|Application Development,Application Development,36.7
+TKT-0230,P3,Security Operations,,Security Operations,1.3
+TKT-0231,P4,Help Desk,,Help Desk,1.6
+TKT-0232,P4,Security Operations,,Security Operations,0.4
+TKT-0233,P1,Help Desk,Desktop Support|Telephony,Telephony,31.1
+TKT-0234,P1,Help Desk,Telephony|Email & Collaboration|Storage & Backup,Storage & Backup,35.7
+TKT-0235,P3,Network Operations,,Network Operations,0.4
+TKT-0236,P4,Security Operations,Database Administration|Security Operations|Telephony,Telephony,13.3
+TKT-0237,P4,Security Operations,,Security Operations,1.5
+TKT-0238,P3,Network Operations,Application Development|Storage & Backup|Database Administration,Database Administration,17.0
+TKT-0239,P4,Security Operations,,Security Operations,1.5
+TKT-0240,P2,Service Desk,Application Development|Cloud Infrastructure,Cloud Infrastructure,21.1
+TKT-0241,P1,Help Desk,,Help Desk,0.2
+TKT-0242,P2,Network Operations,,Network Operations,1.2
+TKT-0243,P1,Network Operations,Cloud Infrastructure|Application Development|Security Operations,Security Operations,37.3
+TKT-0244,P2,Security Operations,,Security Operations,1.3
+TKT-0245,P2,Network Operations,Network Operations|Desktop Support|Security Operations,Security Operations,25.9
+TKT-0246,P1,Service Desk,Security Operations|Network Operations|Telephony,Telephony,37.7
+TKT-0247,P2,Security Operations,Database Administration|Cloud Infrastructure,Cloud Infrastructure,19.8
+TKT-0248,P1,Help Desk,Desktop Support,Desktop Support,31.7
+TKT-0249,P2,Network Operations,Security Operations|Email & Collaboration|Identity & Access,Identity & Access,22.1
+TKT-0250,P2,Service Desk,Identity & Access|Desktop Support,Desktop Support,20.5
+TKT-0251,P3,Service Desk,Telephony|Database Administration|Desktop Support,Desktop Support,18.6
+TKT-0252,P4,Security Operations,,Security Operations,0.7
+TKT-0253,P2,Security Operations,Email & Collaboration,Email & Collaboration,16.9
+TKT-0254,P1,Security Operations,Email & Collaboration|Identity & Access,Identity & Access,33.8
+TKT-0255,P3,Service Desk,,Service Desk,0.6
+TKT-0256,P3,Help Desk,,Help Desk,0.3
+TKT-0257,P4,Network Operations,,Network Operations,1.9
+TKT-0258,P3,Service Desk,Application Development,Application Development,13.9
+TKT-0259,P1,Security Operations,Cloud Infrastructure|Identity & Access,Identity & Access,30.7
+TKT-0260,P4,Help Desk,,Help Desk,0.9
+TKT-0261,P2,Help Desk,Database Administration,Database Administration,16.2
+TKT-0262,P2,Help Desk,Database Administration|Storage & Backup,Storage & Backup,19.5
+TKT-0263,P1,Security Operations,Telephony|Security Operations,Security Operations,30.1
+TKT-0264,P1,Network Operations,,Network Operations,0.5
+TKT-0265,P2,Network Operations,Security Operations|Cloud Infrastructure,Cloud Infrastructure,22.5
+TKT-0266,P4,Network Operations,,Network Operations,1.0
+TKT-0267,P4,Network Operations,,Network Operations,0.6
+TKT-0268,P1,Help Desk,Identity & Access|Application Development,Application Development,34.8
+TKT-0269,P1,Help Desk,Database Administration,Database Administration,29.9
+TKT-0270,P2,Network Operations,Security Operations,Security Operations,18.9
+TKT-0271,P4,Network Operations,,Network Operations,0.7
+TKT-0272,P2,Network Operations,Email & Collaboration|Storage & Backup|Network Operations,Network Operations,23.3
+TKT-0273,P1,Network Operations,Cloud Infrastructure|Desktop Support,Desktop Support,32.4
+TKT-0274,P1,Security Operations,Database Administration|Telephony,Telephony,33.9
+TKT-0275,P1,Security Operations,Identity & Access,Identity & Access,27.3
+TKT-0276,P3,Security Operations,,Security Operations,1.0
+TKT-0277,P4,Network Operations,,Network Operations,0.2
+TKT-0278,P4,Service Desk,Desktop Support|Network Operations|Storage & Backup,Storage & Backup,14.6
+TKT-0279,P2,Help Desk,Security Operations|Cloud Infrastructure|Database Administration,Database Administration,23.7
+TKT-0280,P4,Help Desk,Desktop Support|Network Operations,Network Operations,9.1
+TKT-0281,P3,Help Desk,Security Operations|Network Operations|Database Administration,Database Administration,19.8
+TKT-0282,P2,Security Operations,,Security Operations,1.7
+TKT-0283,P3,Help Desk,,Help Desk,0.3
+TKT-0284,P3,Security Operations,,Security Operations,1.0
+TKT-0285,P4,Service Desk,Telephony,Telephony,9.3
+TKT-0286,P1,Security Operations,Application Development,Application Development,28.3
+TKT-0287,P1,Security Operations,Database Administration|Cloud Infrastructure|Telephony,Telephony,33.9
+TKT-0288,P3,Network Operations,Desktop Support,Desktop Support,13.6
+TKT-0289,P3,Security Operations,,Security Operations,1.6
+TKT-0290,P4,Network Operations,,Network Operations,0.4
+TKT-0291,P4,Help Desk,,Help Desk,0.2
+TKT-0292,P3,Security Operations,,Security Operations,0.2
+TKT-0293,P4,Network Operations,,Network Operations,0.4
+TKT-0294,P1,Security Operations,Storage & Backup|Email & Collaboration|Application Development,Application Development,35.4
+TKT-0295,P4,Security Operations,,Security Operations,1.4
+TKT-0296,P2,Service Desk,Security Operations|Application Development|Storage & Backup,Storage & Backup,23.3
+TKT-0297,P1,Network Operations,Network Operations|Cloud Infrastructure|Application Development,Application Development,36.2
+TKT-0298,P3,Help Desk,Telephony,Telephony,12.4
+TKT-0299,P1,Security Operations,Application Development|Database Administration,Database Administration,32.4
+TKT-0300,P1,Service Desk,Desktop Support|Telephony,Telephony,32.6
+TKT-0301,P2,Help Desk,Database Administration|Application Development|Cloud Infrastructure,Cloud Infrastructure,25.0
+TKT-0302,P2,Service Desk,Storage & Backup|Security Operations|Telephony,Telephony,22.8
+TKT-0303,P2,Service Desk,,Service Desk,0.4
+TKT-0304,P1,Service Desk,Application Development|Security Operations|Email & Collaboration,Email & Collaboration,35.1
+TKT-0305,P1,Help Desk,Email & Collaboration,Email & Collaboration,30.5
+TKT-0306,P1,Service Desk,Desktop Support|Security Operations,Security Operations,30.7
+TKT-0307,P2,Network Operations,Database Administration|Desktop Support|Cloud Infrastructure,Cloud Infrastructure,25.0
+TKT-0308,P4,Service Desk,,Service Desk,0.9
+TKT-0309,P4,Security Operations,,Security Operations,0.2
+TKT-0310,P4,Service Desk,Email & Collaboration|Identity & Access,Identity & Access,11.4
+TKT-0311,P1,Service Desk,Application Development|Cloud Infrastructure|Identity & Access,Identity & Access,35.9
+TKT-0312,P2,Help Desk,Desktop Support,Desktop Support,18.3
+TKT-0313,P1,Help Desk,Security Operations,Security Operations,30.2
+TKT-0314,P2,Help Desk,Database Administration|Security Operations|Network Operations,Network Operations,23.6
+TKT-0315,P2,Service Desk,Network Operations,Network Operations,18.1
+TKT-0316,P3,Service Desk,Telephony,Telephony,10.9
+TKT-0317,P3,Network Operations,Application Development,Application Development,9.4
+TKT-0318,P2,Network Operations,Storage & Backup,Storage & Backup,19.3
+TKT-0319,P4,Network Operations,,Network Operations,1.8
+TKT-0320,P4,Security Operations,,Security Operations,2.0
+TKT-0321,P1,Network Operations,Database Administration|Cloud Infrastructure|Security Operations,Security Operations,34.2
+TKT-0322,P3,Help Desk,Application Development|Storage & Backup|Telephony,Telephony,17.5
+TKT-0323,P4,Security Operations,Security Operations|Desktop Support,Desktop Support,8.3
+TKT-0324,P2,Service Desk,Telephony,Telephony,17.7
+TKT-0325,P2,Service Desk,Security Operations|Identity & Access,Identity & Access,19.2
+TKT-0326,P4,Service Desk,Storage & Backup,Storage & Backup,6.0
+TKT-0327,P4,Service Desk,,Service Desk,1.3
+TKT-0328,P4,Network Operations,,Network Operations,0.4
+TKT-0329,P1,Security Operations,Application Development|Cloud Infrastructure|Security Operations,Security Operations,37.2
+TKT-0330,P1,Network Operations,Security Operations|Application Development,Application Development,34.5
+TKT-0331,P1,Network Operations,Database Administration|Telephony|Identity & Access,Identity & Access,33.9
+TKT-0332,P3,Help Desk,,Help Desk,1.8
+TKT-0333,P1,Service Desk,Cloud Infrastructure,Cloud Infrastructure,27.4
+TKT-0334,P1,Security Operations,Identity & Access,Identity & Access,27.9
+TKT-0335,P2,Security Operations,Email & Collaboration|Cloud Infrastructure|Database Administration,Database Administration,24.1
+TKT-0336,P2,Security Operations,Storage & Backup|Network Operations,Network Operations,19.9
+TKT-0337,P1,Security Operations,Email & Collaboration,Email & Collaboration,29.3
+TKT-0338,P3,Service Desk,,Service Desk,0.7
+TKT-0339,P1,Network Operations,Storage & Backup,Storage & Backup,28.1
+TKT-0340,P3,Network Operations,,Network Operations,0.8
+TKT-0341,P3,Security Operations,Identity & Access,Identity & Access,9.5
+TKT-0342,P4,Service Desk,Cloud Infrastructure|Database Administration,Database Administration,12.2
+TKT-0343,P2,Security Operations,Security Operations|Storage & Backup,Storage & Backup,18.5
+TKT-0344,P4,Network Operations,Application Development,Application Development,5.5
+TKT-0345,P2,Service Desk,,Service Desk,0.7
+TKT-0346,P4,Service Desk,Application Development|Storage & Backup|Email & Collaboration,Email & Collaboration,11.9
+TKT-0347,P3,Service Desk,Database Administration,Database Administration,12.5
+TKT-0348,P3,Service Desk,Database Administration|Storage & Backup|Network Operations,Network Operations,16.3
+TKT-0349,P1,Service Desk,Database Administration,Database Administration,28.0
+TKT-0350,P3,Security Operations,Telephony|Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,16.1
+TKT-0351,P4,Service Desk,,Service Desk,1.7
+TKT-0352,P4,Security Operations,Desktop Support|Telephony,Telephony,8.6
+TKT-0353,P3,Help Desk,,Help Desk,0.6
+TKT-0354,P1,Service Desk,Security Operations|Network Operations,Network Operations,31.3
+TKT-0355,P2,Help Desk,Desktop Support|Identity & Access|Application Development,Application Development,22.7
+TKT-0356,P4,Network Operations,Telephony|Network Operations|Application Development,Application Development,12.5
+TKT-0357,P2,Network Operations,Security Operations,Security Operations,16.1
+TKT-0358,P2,Help Desk,,Help Desk,1.3
+TKT-0359,P1,Network Operations,Database Administration,Database Administration,31.3
+TKT-0360,P4,Service Desk,,Service Desk,1.7
+TKT-0361,P2,Help Desk,Email & Collaboration|Telephony|Desktop Support,Desktop Support,21.7
+TKT-0362,P2,Service Desk,Security Operations|Telephony|Email & Collaboration,Email & Collaboration,23.5
+TKT-0363,P1,Help Desk,Network Operations,Network Operations,29.6
+TKT-0364,P4,Service Desk,,Service Desk,1.3
+TKT-0365,P2,Help Desk,Telephony|Cloud Infrastructure|Storage & Backup,Storage & Backup,24.9
+TKT-0366,P2,Help Desk,Network Operations|Telephony|Security Operations,Security Operations,23.2
+TKT-0367,P1,Service Desk,Security Operations,Security Operations,30.5
+TKT-0368,P1,Service Desk,Desktop Support,Desktop Support,28.8
+TKT-0369,P4,Security Operations,,Security Operations,0.3
+TKT-0370,P1,Security Operations,Storage & Backup|Database Administration,Database Administration,32.0
+TKT-0371,P4,Network Operations,,Network Operations,2.0
+TKT-0372,P3,Network Operations,,Network Operations,0.9
+TKT-0373,P2,Security Operations,Network Operations|Telephony,Telephony,19.6
+TKT-0374,P2,Network Operations,Database Administration|Cloud Infrastructure|Desktop Support,Desktop Support,22.0
+TKT-0375,P1,Service Desk,Storage & Backup|Application Development|Email & Collaboration,Email & Collaboration,37.8
+TKT-0376,P1,Service Desk,Email & Collaboration|Telephony|Cloud Infrastructure,Cloud Infrastructure,37.8
+TKT-0377,P4,Help Desk,Identity & Access|Storage & Backup|Desktop Support,Desktop Support,11.9
+TKT-0378,P3,Help Desk,Network Operations|Cloud Infrastructure,Cloud Infrastructure,14.2
+TKT-0379,P1,Service Desk,Network Operations,Network Operations,27.4
+TKT-0380,P2,Security Operations,,Security Operations,0.6
+TKT-0381,P1,Security Operations,Desktop Support,Desktop Support,31.2
+TKT-0382,P4,Help Desk,,Help Desk,1.8
+TKT-0383,P2,Help Desk,Application Development,Application Development,15.6
+TKT-0384,P3,Security Operations,,Security Operations,1.6
+TKT-0385,P3,Security Operations,Security Operations|Telephony|Network Operations,Network Operations,17.4
+TKT-0386,P4,Help Desk,,Help Desk,0.6
+TKT-0387,P2,Network Operations,,Network Operations,1.2
+TKT-0388,P4,Help Desk,,Help Desk,0.3
+TKT-0389,P1,Network Operations,Security Operations,Security Operations,31.5
+TKT-0390,P2,Security Operations,Desktop Support,Desktop Support,19.0
+TKT-0391,P3,Service Desk,,Service Desk,0.6
+TKT-0392,P1,Help Desk,Desktop Support,Desktop Support,28.0
+TKT-0393,P3,Security Operations,Desktop Support,Desktop Support,11.0
+TKT-0394,P3,Service Desk,Network Operations|Storage & Backup|Application Development,Application Development,18.9
+TKT-0395,P2,Network Operations,,Network Operations,0.7
+TKT-0396,P3,Network Operations,Desktop Support|Identity & Access|Cloud Infrastructure,Cloud Infrastructure,19.9
+TKT-0397,P1,Security Operations,Identity & Access|Cloud Infrastructure|Desktop Support,Desktop Support,33.3
+TKT-0398,P2,Network Operations,,Network Operations,1.1
+TKT-0399,P1,Network Operations,Desktop Support|Identity & Access|Security Operations,Security Operations,35.2
+TKT-0400,P3,Security Operations,Storage & Backup|Email & Collaboration|Security Operations,Security Operations,16.8
+TKT-0401,P3,Help Desk,Application Development,Application Development,11.3
+TKT-0402,P3,Network Operations,,Network Operations,1.6
+TKT-0403,P2,Help Desk,Telephony|Cloud Infrastructure|Network Operations,Network Operations,23.3
+TKT-0404,P2,Security Operations,Database Administration|Telephony,Telephony,19.6
+TKT-0405,P4,Network Operations,,Network Operations,0.5
+TKT-0406,P4,Help Desk,Cloud Infrastructure|Storage & Backup|Email & Collaboration,Email & Collaboration,14.0
+TKT-0407,P4,Help Desk,Database Administration|Desktop Support|Cloud Infrastructure,Cloud Infrastructure,11.4
+TKT-0408,P3,Help Desk,,Help Desk,0.6
+TKT-0409,P2,Security Operations,Network Operations|Database Administration|Cloud Infrastructure,Cloud Infrastructure,22.4
+TKT-0410,P3,Network Operations,,Network Operations,0.4
+TKT-0411,P1,Help Desk,Desktop Support|Telephony|Application Development,Application Development,33.3
+TKT-0412,P4,Service Desk,,Service Desk,1.0
+TKT-0413,P1,Service Desk,Telephony|Application Development|Storage & Backup,Storage & Backup,35.6
+TKT-0414,P4,Security Operations,Storage & Backup|Identity & Access|Desktop Support,Desktop Support,13.3
+TKT-0415,P2,Network Operations,Email & Collaboration|Security Operations|Telephony,Telephony,24.3
+TKT-0416,P3,Service Desk,Security Operations|Telephony,Telephony,13.8
+TKT-0417,P1,Security Operations,Security Operations|Telephony|Cloud Infrastructure,Cloud Infrastructure,37.5
+TKT-0418,P2,Help Desk,Storage & Backup,Storage & Backup,19.2
+TKT-0419,P2,Service Desk,Database Administration|Application Development|Network Operations,Network Operations,25.8
+TKT-0420,P4,Network Operations,,Network Operations,1.7
+TKT-0421,P3,Network Operations,,Network Operations,0.6
+TKT-0422,P4,Help Desk,,Help Desk,1.8
+TKT-0423,P3,Security Operations,,Security Operations,1.4
+TKT-0424,P3,Service Desk,Security Operations,Security Operations,9.2
+TKT-0425,P2,Security Operations,,Security Operations,0.2
+TKT-0426,P1,Service Desk,Storage & Backup|Application Development|Database Administration,Database Administration,33.4
+TKT-0427,P1,Security Operations,Security Operations,Security Operations,27.6
+TKT-0428,P4,Security Operations,,Security Operations,1.3
+TKT-0429,P2,Network Operations,Storage & Backup|Telephony,Telephony,19.8
+TKT-0430,P2,Security Operations,Application Development|Network Operations,Network Operations,19.0
+TKT-0431,P3,Security Operations,Security Operations|Database Administration,Database Administration,16.7
+TKT-0432,P2,Network Operations,,Network Operations,1.0
+TKT-0433,P3,Service Desk,Cloud Infrastructure|Desktop Support|Application Development,Application Development,19.8
+TKT-0434,P3,Service Desk,Telephony|Email & Collaboration,Email & Collaboration,13.8
+TKT-0435,P2,Network Operations,,Network Operations,1.7
+TKT-0436,P1,Network Operations,,Network Operations,1.2
+TKT-0437,P2,Network Operations,,Network Operations,1.6
+TKT-0438,P1,Network Operations,Telephony|Cloud Infrastructure|Network Operations,Network Operations,33.8
+TKT-0439,P3,Help Desk,Telephony|Security Operations,Security Operations,12.7
+TKT-0440,P3,Network Operations,,Network Operations,0.2
+TKT-0441,P2,Security Operations,Database Administration,Database Administration,17.0
+TKT-0442,P4,Service Desk,,Service Desk,2.0
+TKT-0443,P3,Help Desk,,Help Desk,1.6
+TKT-0444,P4,Help Desk,,Help Desk,0.6
+TKT-0445,P4,Security Operations,,Security Operations,1.5
+TKT-0446,P3,Help Desk,Desktop Support|Application Development|Email & Collaboration,Email & Collaboration,19.9
+TKT-0447,P4,Help Desk,Security Operations|Storage & Backup|Desktop Support,Desktop Support,12.2
+TKT-0448,P2,Service Desk,Security Operations|Email & Collaboration,Email & Collaboration,18.3
+TKT-0449,P1,Service Desk,Database Administration|Desktop Support,Desktop Support,32.8
+TKT-0450,P1,Help Desk,Application Development|Desktop Support,Desktop Support,33.1
+TKT-0451,P1,Security Operations,Database Administration,Database Administration,30.0
+TKT-0452,P4,Service Desk,,Service Desk,1.3
+TKT-0453,P4,Network Operations,,Network Operations,0.7
+TKT-0454,P1,Security Operations,Identity & Access|Cloud Infrastructure|Storage & Backup,Storage & Backup,35.4
+TKT-0455,P4,Network Operations,,Network Operations,1.7
+TKT-0456,P1,Network Operations,Telephony|Cloud Infrastructure,Cloud Infrastructure,31.8
+TKT-0457,P4,Security Operations,,Security Operations,0.5
+TKT-0458,P1,Network Operations,Telephony,Telephony,27.1
+TKT-0459,P1,Service Desk,Database Administration,Database Administration,29.8
+TKT-0460,P2,Service Desk,Cloud Infrastructure|Email & Collaboration,Email & Collaboration,21.9
+TKT-0461,P3,Security Operations,,Security Operations,1.7
+TKT-0462,P4,Help Desk,,Help Desk,1.0
+TKT-0463,P1,Network Operations,Identity & Access|Desktop Support|Database Administration,Database Administration,37.8
+TKT-0464,P1,Help Desk,Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,32.5
+TKT-0465,P4,Service Desk,Telephony,Telephony,7.5
+TKT-0466,P1,Network Operations,Network Operations|Application Development,Application Development,34.6
+TKT-0467,P1,Network Operations,Identity & Access,Identity & Access,31.7
+TKT-0468,P1,Help Desk,Telephony,Telephony,30.8
+TKT-0469,P1,Service Desk,Identity & Access|Network Operations,Network Operations,30.2
+TKT-0470,P2,Security Operations,Desktop Support|Security Operations|Application Development,Application Development,21.5
+TKT-0471,P3,Help Desk,,Help Desk,0.6
+TKT-0472,P4,Network Operations,,Network Operations,1.8
+TKT-0473,P2,Help Desk,Desktop Support,Desktop Support,18.0
+TKT-0474,P2,Help Desk,,Help Desk,0.2
+TKT-0475,P1,Network Operations,Identity & Access|Storage & Backup,Storage & Backup,31.1
+TKT-0476,P2,Security Operations,Security Operations|Network Operations|Identity & Access,Identity & Access,23.6
+TKT-0477,P4,Security Operations,,Security Operations,0.5
+TKT-0478,P3,Service Desk,Identity & Access|Security Operations,Security Operations,16.9
+TKT-0479,P1,Help Desk,Security Operations|Desktop Support,Desktop Support,30.8
+TKT-0480,P4,Network Operations,,Network Operations,1.9
+TKT-0481,P2,Security Operations,,Security Operations,0.5
+TKT-0482,P2,Service Desk,Security Operations|Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,22.6
+TKT-0483,P2,Help Desk,Cloud Infrastructure|Telephony|Network Operations,Network Operations,23.2
+TKT-0484,P2,Security Operations,Storage & Backup,Storage & Backup,19.1
+TKT-0485,P1,Network Operations,Storage & Backup|Cloud Infrastructure|Identity & Access,Identity & Access,34.3
+TKT-0486,P1,Network Operations,Security Operations,Security Operations,31.4
+TKT-0487,P1,Help Desk,Cloud Infrastructure|Application Development,Application Development,30.2
+TKT-0488,P3,Service Desk,Security Operations,Security Operations,9.7
+TKT-0489,P3,Network Operations,,Network Operations,1.6
+TKT-0490,P4,Help Desk,Desktop Support|Database Administration|Storage & Backup,Storage & Backup,14.8
+TKT-0491,P1,Network Operations,Telephony|Email & Collaboration|Identity & Access,Identity & Access,35.4
+TKT-0492,P3,Network Operations,,Network Operations,1.6
+TKT-0493,P1,Help Desk,Network Operations,Network Operations,28.6
+TKT-0494,P3,Security Operations,Cloud Infrastructure|Telephony,Telephony,14.1
+TKT-0495,P1,Network Operations,Email & Collaboration|Application Development|Network Operations,Network Operations,37.7
+TKT-0496,P2,Security Operations,Application Development|Identity & Access|Database Administration,Database Administration,24.6
+TKT-0497,P4,Security Operations,,Security Operations,1.2
+TKT-0498,P2,Help Desk,Network Operations|Desktop Support|Application Development,Application Development,23.7
+TKT-0499,P1,Network Operations,Database Administration,Database Administration,30.6
+TKT-0500,P4,Service Desk,,Service Desk,0.9
+TKT-0501,P3,Help Desk,Storage & Backup|Network Operations,Network Operations,12.9
+TKT-0502,P3,Network Operations,Database Administration|Storage & Backup,Storage & Backup,12.6
+TKT-0503,P4,Security Operations,,Security Operations,1.3
+TKT-0504,P2,Network Operations,Storage & Backup|Telephony,Telephony,19.8
+TKT-0505,P1,Network Operations,Telephony|Email & Collaboration|Application Development,Application Development,34.7
+TKT-0506,P2,Security Operations,,Security Operations,2.0
+TKT-0507,P3,Network Operations,Storage & Backup|Application Development,Application Development,13.8
+TKT-0508,P4,Help Desk,,Help Desk,1.2
+TKT-0509,P1,Service Desk,Security Operations|Identity & Access|Database Administration,Database Administration,33.5
+TKT-0510,P2,Service Desk,Storage & Backup|Security Operations|Database Administration,Database Administration,21.4
+TKT-0511,P2,Service Desk,,Service Desk,1.0
+TKT-0512,P4,Security Operations,Security Operations|Storage & Backup,Storage & Backup,11.3
+TKT-0513,P1,Service Desk,Security Operations|Application Development,Application Development,32.6
+TKT-0514,P3,Security Operations,,Security Operations,1.5
+TKT-0515,P2,Network Operations,Application Development|Cloud Infrastructure|Desktop Support,Desktop Support,24.0
+TKT-0516,P2,Security Operations,,Security Operations,0.1
+TKT-0517,P4,Help Desk,,Help Desk,1.2
+TKT-0518,P3,Help Desk,,Help Desk,0.4
+TKT-0519,P1,Service Desk,Database Administration|Security Operations|Storage & Backup,Storage & Backup,33.9
+TKT-0520,P2,Service Desk,,Service Desk,1.6
+TKT-0521,P1,Security Operations,Cloud Infrastructure|Security Operations|Desktop Support,Desktop Support,36.2
+TKT-0522,P4,Help Desk,Desktop Support,Desktop Support,7.5
+TKT-0523,P3,Network Operations,,Network Operations,1.7
+TKT-0524,P1,Network Operations,Storage & Backup,Storage & Backup,31.1
+TKT-0525,P3,Service Desk,,Service Desk,0.5
+TKT-0526,P3,Security Operations,,Security Operations,1.4
+TKT-0527,P2,Help Desk,Email & Collaboration|Identity & Access|Database Administration,Database Administration,22.2
+TKT-0528,P3,Help Desk,Identity & Access|Network Operations|Storage & Backup,Storage & Backup,16.3
+TKT-0529,P3,Security Operations,,Security Operations,1.9
+TKT-0530,P4,Security Operations,Telephony|Email & Collaboration|Network Operations,Network Operations,12.8
+TKT-0531,P4,Help Desk,,Help Desk,1.3
+TKT-0532,P4,Network Operations,,Network Operations,1.1
+TKT-0533,P1,Network Operations,Storage & Backup,Storage & Backup,31.6
+TKT-0534,P1,Help Desk,Application Development|Telephony,Telephony,33.9
+TKT-0535,P4,Service Desk,Database Administration|Telephony,Telephony,10.1
+TKT-0536,P1,Help Desk,Desktop Support|Application Development|Telephony,Telephony,37.9
+TKT-0537,P1,Service Desk,Application Development|Identity & Access|Network Operations,Network Operations,36.9
+TKT-0538,P3,Service Desk,Cloud Infrastructure|Database Administration,Database Administration,13.0
+TKT-0539,P3,Network Operations,Telephony|Email & Collaboration|Desktop Support,Desktop Support,17.5
+TKT-0540,P3,Network Operations,,Network Operations,0.3
+TKT-0541,P3,Help Desk,,Help Desk,0.8
+TKT-0542,P1,Network Operations,Email & Collaboration|Application Development|Cloud Infrastructure,Cloud Infrastructure,37.4
+TKT-0543,P2,Service Desk,Email & Collaboration|Database Administration|Telephony,Telephony,25.9
+TKT-0544,P2,Help Desk,Cloud Infrastructure,Cloud Infrastructure,19.9
+TKT-0545,P4,Service Desk,Email & Collaboration|Storage & Backup|Database Administration,Database Administration,14.7
+TKT-0546,P3,Security Operations,Database Administration|Application Development|Storage & Backup,Storage & Backup,16.7
+TKT-0547,P2,Service Desk,,Service Desk,1.8
+TKT-0548,P2,Security Operations,,Security Operations,0.3
+TKT-0549,P1,Help Desk,Email & Collaboration|Storage & Backup,Storage & Backup,34.8
+TKT-0550,P4,Network Operations,,Network Operations,0.7
+TKT-0551,P1,Network Operations,,Network Operations,0.4
+TKT-0552,P4,Service Desk,,Service Desk,1.8
+TKT-0553,P3,Service Desk,Email & Collaboration|Database Administration|Security Operations,Security Operations,16.2
+TKT-0554,P1,Security Operations,Application Development|Desktop Support,Desktop Support,34.9
+TKT-0555,P2,Network Operations,,Network Operations,1.4
+TKT-0556,P1,Help Desk,Security Operations|Desktop Support|Storage & Backup,Storage & Backup,33.8
+TKT-0557,P1,Help Desk,Telephony,Telephony,30.2
+TKT-0558,P2,Network Operations,Database Administration,Database Administration,17.4
+TKT-0559,P1,Network Operations,Security Operations|Application Development|Cloud Infrastructure,Cloud Infrastructure,36.5
+TKT-0560,P3,Security Operations,Identity & Access|Database Administration,Database Administration,16.2
+TKT-0561,P3,Service Desk,Database Administration|Telephony|Email & Collaboration,Email & Collaboration,17.6
+TKT-0562,P1,Security Operations,Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,33.6
+TKT-0563,P1,Help Desk,Identity & Access,Identity & Access,30.3
+TKT-0564,P2,Help Desk,,Help Desk,0.2
+TKT-0565,P4,Security Operations,,Security Operations,1.5
+TKT-0566,P4,Security Operations,Identity & Access,Identity & Access,9.6
+TKT-0567,P2,Network Operations,Network Operations|Database Administration|Email & Collaboration,Email & Collaboration,25.5
+TKT-0568,P4,Network Operations,,Network Operations,0.3
+TKT-0569,P4,Help Desk,Desktop Support,Desktop Support,6.0
+TKT-0570,P2,Help Desk,Cloud Infrastructure,Cloud Infrastructure,19.5
+TKT-0571,P4,Network Operations,Security Operations|Identity & Access,Identity & Access,11.5
+TKT-0572,P1,Security Operations,Security Operations,Security Operations,28.4
+TKT-0573,P1,Network Operations,Cloud Infrastructure|Identity & Access|Network Operations,Network Operations,36.0
+TKT-0574,P2,Network Operations,Application Development,Application Development,19.9
+TKT-0575,P3,Network Operations,,Network Operations,1.5
+TKT-0576,P4,Help Desk,Telephony|Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,13.5
+TKT-0577,P4,Help Desk,Security Operations|Network Operations|Desktop Support,Desktop Support,11.5
+TKT-0578,P1,Help Desk,Security Operations|Network Operations,Network Operations,31.5
+TKT-0579,P4,Network Operations,Cloud Infrastructure,Cloud Infrastructure,7.6
+TKT-0580,P4,Network Operations,,Network Operations,1.5
+TKT-0581,P4,Security Operations,,Security Operations,0.9
+TKT-0582,P1,Security Operations,Email & Collaboration|Application Development,Application Development,30.9
+TKT-0583,P4,Network Operations,,Network Operations,1.5
+TKT-0584,P4,Security Operations,,Security Operations,0.1
+TKT-0585,P3,Network Operations,,Network Operations,0.9
+TKT-0586,P2,Service Desk,Desktop Support,Desktop Support,16.0
+TKT-0587,P1,Service Desk,Security Operations,Security Operations,27.8
+TKT-0588,P2,Network Operations,Desktop Support,Desktop Support,19.0
+TKT-0589,P1,Help Desk,Telephony|Database Administration,Database Administration,34.0
+TKT-0590,P4,Network Operations,Identity & Access,Identity & Access,7.7
+TKT-0591,P1,Network Operations,Email & Collaboration|Cloud Infrastructure|Security Operations,Security Operations,35.8
+TKT-0592,P1,Security Operations,Storage & Backup,Storage & Backup,31.6
+TKT-0593,P2,Security Operations,Cloud Infrastructure,Cloud Infrastructure,16.1
+TKT-0594,P2,Network Operations,Security Operations,Security Operations,19.3
+TKT-0595,P4,Network Operations,,Network Operations,1.3
+TKT-0596,P2,Security Operations,,Security Operations,1.5
+TKT-0597,P1,Service Desk,Security Operations|Cloud Infrastructure|Email & Collaboration,Email & Collaboration,37.7
+TKT-0598,P2,Security Operations,Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,18.2
+TKT-0599,P4,Service Desk,,Service Desk,1.3
+TKT-0600,P1,Network Operations,Security Operations|Database Administration,Database Administration,32.9
+TKT-0601,P4,Network Operations,Network Operations|Email & Collaboration,Email & Collaboration,11.2
+TKT-0602,P1,Service Desk,Network Operations,Network Operations,29.9
+TKT-0603,P4,Network Operations,Email & Collaboration|Database Administration,Database Administration,12.3
+TKT-0604,P2,Network Operations,Email & Collaboration|Cloud Infrastructure,Cloud Infrastructure,20.0
+TKT-0605,P2,Security Operations,,Security Operations,0.2
+TKT-0606,P1,Network Operations,Desktop Support|Security Operations|Network Operations,Network Operations,37.5
+TKT-0607,P2,Help Desk,Telephony|Security Operations,Security Operations,21.9
+TKT-0608,P2,Security Operations,Application Development,Application Development,15.0
+TKT-0609,P1,Help Desk,Storage & Backup|Identity & Access|Database Administration,Database Administration,36.7
+TKT-0610,P2,Network Operations,,Network Operations,1.8
+TKT-0611,P4,Help Desk,Application Development|Identity & Access,Identity & Access,11.2
+TKT-0612,P1,Network Operations,Security Operations|Telephony,Telephony,34.0
+TKT-0613,P4,Security Operations,,Security Operations,0.4
+TKT-0614,P1,Service Desk,Desktop Support|Cloud Infrastructure,Cloud Infrastructure,34.1
+TKT-0615,P1,Network Operations,Database Administration|Cloud Infrastructure|Network Operations,Network Operations,37.3
+TKT-0616,P1,Security Operations,Cloud Infrastructure,Cloud Infrastructure,29.3
+TKT-0617,P3,Service Desk,,Service Desk,0.3
+TKT-0618,P4,Service Desk,,Service Desk,1.8
+TKT-0619,P4,Security Operations,,Security Operations,0.1
+TKT-0620,P3,Service Desk,,Service Desk,1.5
+TKT-0621,P3,Security Operations,Database Administration|Application Development|Storage & Backup,Storage & Backup,15.1
+TKT-0622,P1,Help Desk,Identity & Access,Identity & Access,30.7
+TKT-0623,P1,Help Desk,Telephony|Identity & Access,Identity & Access,31.9
+TKT-0624,P4,Network Operations,Storage & Backup|Application Development,Application Development,8.2
+TKT-0625,P3,Help Desk,Identity & Access,Identity & Access,11.8
+TKT-0626,P1,Security Operations,Application Development|Security Operations,Security Operations,32.1
+TKT-0627,P4,Network Operations,,Network Operations,0.6
+TKT-0628,P4,Service Desk,,Service Desk,1.8
+TKT-0629,P1,Service Desk,Cloud Infrastructure|Database Administration|Storage & Backup,Storage & Backup,37.5
+TKT-0630,P2,Security Operations,,Security Operations,0.4
+TKT-0631,P1,Security Operations,Email & Collaboration|Network Operations,Network Operations,33.8
+TKT-0632,P4,Network Operations,,Network Operations,0.0
+TKT-0633,P1,Network Operations,Database Administration,Database Administration,29.1
+TKT-0634,P3,Network Operations,,Network Operations,1.9
+TKT-0635,P3,Service Desk,Telephony|Application Development|Email & Collaboration,Email & Collaboration,15.5
+TKT-0636,P4,Service Desk,Security Operations|Telephony|Network Operations,Network Operations,14.0
+TKT-0637,P3,Service Desk,Email & Collaboration|Security Operations,Security Operations,15.5
+TKT-0638,P1,Security Operations,Network Operations|Cloud Infrastructure|Email & Collaboration,Email & Collaboration,33.2
+TKT-0639,P4,Security Operations,Database Administration,Database Administration,9.0
+TKT-0640,P1,Network Operations,Storage & Backup|Identity & Access|Database Administration,Database Administration,34.0
+TKT-0641,P2,Service Desk,Identity & Access|Network Operations,Network Operations,20.1
+TKT-0642,P1,Security Operations,Database Administration,Database Administration,27.5
+TKT-0643,P1,Network Operations,Email & Collaboration|Database Administration|Desktop Support,Desktop Support,33.8
+TKT-0644,P4,Service Desk,,Service Desk,1.5
+TKT-0645,P1,Service Desk,Telephony|Email & Collaboration,Email & Collaboration,32.1
+TKT-0646,P2,Security Operations,,Security Operations,1.6
+TKT-0647,P1,Security Operations,Email & Collaboration|Storage & Backup|Desktop Support,Desktop Support,37.1
+TKT-0648,P1,Service Desk,Cloud Infrastructure,Cloud Infrastructure,30.2
+TKT-0649,P2,Security Operations,Network Operations,Network Operations,16.4
+TKT-0650,P1,Service Desk,Cloud Infrastructure,Cloud Infrastructure,31.9
+TKT-0651,P2,Help Desk,Application Development|Email & Collaboration|Identity & Access,Identity & Access,22.2
+TKT-0652,P1,Security Operations,Storage & Backup|Network Operations|Security Operations,Security Operations,38.0
+TKT-0653,P3,Help Desk,Identity & Access|Email & Collaboration,Email & Collaboration,16.5
+TKT-0654,P4,Security Operations,,Security Operations,1.1
+TKT-0655,P4,Service Desk,Security Operations|Storage & Backup|Identity & Access,Identity & Access,11.4
+TKT-0656,P2,Help Desk,Network Operations|Storage & Backup|Application Development,Application Development,23.3
+TKT-0657,P4,Help Desk,Identity & Access|Telephony,Telephony,12.2
+TKT-0658,P4,Service Desk,,Service Desk,0.1
+TKT-0659,P1,Network Operations,Identity & Access|Email & Collaboration|Database Administration,Database Administration,36.5
+TKT-0660,P1,Service Desk,Storage & Backup,Storage & Backup,30.8
+TKT-0661,P2,Service Desk,Identity & Access|Security Operations|Database Administration,Database Administration,24.5
+TKT-0662,P1,Help Desk,Desktop Support|Telephony|Security Operations,Security Operations,33.4
+TKT-0663,P3,Network Operations,,Network Operations,0.3
+TKT-0664,P3,Service Desk,Telephony|Identity & Access|Application Development,Application Development,19.8
+TKT-0665,P4,Security Operations,,Security Operations,0.4
+TKT-0666,P1,Help Desk,Application Development|Desktop Support,Desktop Support,33.5
+TKT-0667,P3,Security Operations,Storage & Backup|Desktop Support,Desktop Support,12.7
+TKT-0668,P1,Help Desk,Storage & Backup|Email & Collaboration,Email & Collaboration,33.6
+TKT-0669,P3,Service Desk,,Service Desk,0.0
+TKT-0670,P4,Security Operations,Security Operations,Security Operations,6.2
+TKT-0671,P1,Network Operations,Identity & Access,Identity & Access,31.5
+TKT-0672,P1,Network Operations,Storage & Backup,Storage & Backup,30.6
+TKT-0673,P3,Service Desk,Database Administration,Database Administration,11.8
+TKT-0674,P3,Help Desk,Desktop Support|Identity & Access,Identity & Access,12.9
+TKT-0675,P2,Help Desk,Database Administration|Storage & Backup|Network Operations,Network Operations,25.4
+TKT-0676,P2,Help Desk,,Help Desk,1.0
+TKT-0677,P4,Network Operations,,Network Operations,1.1
+TKT-0678,P3,Service Desk,Security Operations,Security Operations,10.6
+TKT-0679,P3,Help Desk,,Help Desk,1.5
+TKT-0680,P2,Network Operations,Identity & Access|Network Operations,Network Operations,22.9
+TKT-0681,P4,Network Operations,,Network Operations,1.1
+TKT-0682,P1,Security Operations,Database Administration,Database Administration,29.0
+TKT-0683,P4,Help Desk,Cloud Infrastructure,Cloud Infrastructure,8.5
+TKT-0684,P4,Network Operations,,Network Operations,0.9
+TKT-0685,P1,Security Operations,Database Administration|Application Development,Application Development,34.9
+TKT-0686,P1,Help Desk,Desktop Support,Desktop Support,30.7
+TKT-0687,P2,Help Desk,,Help Desk,0.9
+TKT-0688,P4,Security Operations,,Security Operations,1.3
+TKT-0689,P1,Help Desk,Database Administration|Cloud Infrastructure,Cloud Infrastructure,34.8
+TKT-0690,P3,Help Desk,Identity & Access,Identity & Access,9.2
+TKT-0691,P3,Network Operations,Application Development|Database Administration|Security Operations,Security Operations,16.2
+TKT-0692,P2,Help Desk,Cloud Infrastructure,Cloud Infrastructure,19.8
+TKT-0693,P3,Network Operations,Security Operations|Storage & Backup,Storage & Backup,12.7
+TKT-0694,P4,Service Desk,Email & Collaboration,Email & Collaboration,8.4
+TKT-0695,P3,Security Operations,Email & Collaboration|Application Development,Application Development,13.9
+TKT-0696,P3,Help Desk,,Help Desk,0.5
+TKT-0697,P4,Help Desk,Network Operations|Telephony,Telephony,11.6
+TKT-0698,P4,Service Desk,Storage & Backup|Network Operations,Network Operations,12.7
+TKT-0699,P1,Security Operations,Network Operations|Security Operations|Email & Collaboration,Email & Collaboration,36.4
+TKT-0700,P4,Network Operations,,Network Operations,1.1
+TKT-0701,P1,Network Operations,Security Operations|Storage & Backup|Application Development,Application Development,34.9
+TKT-0702,P1,Network Operations,Desktop Support,Desktop Support,29.7
+TKT-0703,P3,Help Desk,,Help Desk,1.2
+TKT-0704,P1,Help Desk,Desktop Support|Security Operations|Storage & Backup,Storage & Backup,33.2
+TKT-0705,P3,Security Operations,,Security Operations,1.1
+TKT-0706,P3,Network Operations,,Network Operations,1.3
+TKT-0707,P3,Help Desk,Network Operations|Application Development,Application Development,12.4
+TKT-0708,P2,Security Operations,Security Operations,Security Operations,16.9
+TKT-0709,P4,Network Operations,,Network Operations,0.7
+TKT-0710,P4,Network Operations,Security Operations|Email & Collaboration,Email & Collaboration,8.4
+TKT-0711,P3,Security Operations,Email & Collaboration|Telephony,Telephony,12.8
+TKT-0712,P4,Security Operations,,Security Operations,0.6
+TKT-0713,P4,Service Desk,,Service Desk,0.0
+TKT-0714,P1,Network Operations,Storage & Backup|Security Operations|Identity & Access,Identity & Access,37.4
+TKT-0715,P1,Security Operations,Application Development,Application Development,29.9
+TKT-0716,P1,Network Operations,,Network Operations,1.1
+TKT-0717,P2,Security Operations,Telephony|Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,24.1
+TKT-0718,P1,Service Desk,Telephony|Desktop Support,Desktop Support,33.5
+TKT-0719,P4,Security Operations,,Security Operations,0.5
+TKT-0720,P3,Network Operations,,Network Operations,0.5
+TKT-0721,P2,Network Operations,Telephony|Application Development|Storage & Backup,Storage & Backup,22.2
+TKT-0722,P3,Network Operations,Application Development|Telephony|Email & Collaboration,Email & Collaboration,18.4
+TKT-0723,P2,Security Operations,Telephony,Telephony,18.9
+TKT-0724,P4,Service Desk,,Service Desk,0.2
+TKT-0725,P2,Network Operations,,Network Operations,1.1
+TKT-0726,P1,Network Operations,Identity & Access|Telephony,Telephony,34.0
+TKT-0727,P4,Service Desk,Database Administration|Email & Collaboration|Network Operations,Network Operations,12.0
+TKT-0728,P2,Network Operations,,Network Operations,0.3
+TKT-0729,P3,Service Desk,Application Development|Telephony,Telephony,12.1
+TKT-0730,P2,Service Desk,Desktop Support|Network Operations,Network Operations,19.6
+TKT-0731,P3,Network Operations,,Network Operations,0.9
+TKT-0732,P1,Security Operations,Email & Collaboration|Network Operations|Storage & Backup,Storage & Backup,35.5
+TKT-0733,P2,Network Operations,Cloud Infrastructure|Database Administration,Database Administration,19.6
+TKT-0734,P1,Help Desk,Identity & Access,Identity & Access,31.6
+TKT-0735,P4,Service Desk,Cloud Infrastructure,Cloud Infrastructure,9.5
+TKT-0736,P3,Help Desk,,Help Desk,1.5
+TKT-0737,P3,Help Desk,,Help Desk,0.7
+TKT-0738,P1,Network Operations,,Network Operations,1.1
+TKT-0739,P2,Network Operations,Network Operations|Email & Collaboration|Storage & Backup,Storage & Backup,25.5
+TKT-0740,P2,Security Operations,,Security Operations,0.1
+TKT-0741,P4,Security Operations,,Security Operations,1.5
+TKT-0742,P3,Help Desk,,Help Desk,0.3
+TKT-0743,P3,Security Operations,,Security Operations,0.1
+TKT-0744,P1,Security Operations,Network Operations,Network Operations,29.5
+TKT-0745,P3,Security Operations,,Security Operations,1.2
+TKT-0746,P3,Network Operations,,Network Operations,0.2
+TKT-0747,P2,Security Operations,Network Operations,Network Operations,15.3
+TKT-0748,P4,Security Operations,Database Administration|Telephony,Telephony,12.1
+TKT-0749,P4,Security Operations,Network Operations|Identity & Access,Identity & Access,9.2
+TKT-0750,P1,Service Desk,Network Operations,Network Operations,30.9
+TKT-0751,P4,Service Desk,,Service Desk,0.5
+TKT-0752,P3,Help Desk,,Help Desk,1.1
+TKT-0753,P1,Security Operations,,Security Operations,0.8
+TKT-0754,P4,Service Desk,,Service Desk,1.4
+TKT-0755,P4,Security Operations,,Security Operations,0.9
+TKT-0756,P2,Help Desk,Security Operations|Network Operations,Network Operations,18.6
+TKT-0757,P4,Security Operations,Desktop Support,Desktop Support,6.4
+TKT-0758,P4,Service Desk,,Service Desk,0.5
+TKT-0759,P2,Service Desk,Desktop Support,Desktop Support,19.8
+TKT-0760,P2,Service Desk,Storage & Backup|Identity & Access,Identity & Access,18.5
+TKT-0761,P3,Network Operations,Storage & Backup,Storage & Backup,13.8
+TKT-0762,P2,Service Desk,Application Development|Cloud Infrastructure,Cloud Infrastructure,18.5
+TKT-0763,P4,Help Desk,,Help Desk,1.6
+TKT-0764,P1,Help Desk,Telephony,Telephony,30.8
+TKT-0765,P3,Security Operations,Identity & Access|Application Development|Email & Collaboration,Email & Collaboration,17.0
+TKT-0766,P2,Service Desk,Desktop Support|Email & Collaboration,Email & Collaboration,22.2
+TKT-0767,P2,Service Desk,Security Operations|Telephony,Telephony,19.9
+TKT-0768,P2,Network Operations,Database Administration|Cloud Infrastructure,Cloud Infrastructure,20.3
+TKT-0769,P4,Network Operations,,Network Operations,0.7
+TKT-0770,P3,Help Desk,Database Administration|Application Development|Email & Collaboration,Email & Collaboration,19.1
+TKT-0771,P1,Security Operations,Network Operations|Identity & Access|Cloud Infrastructure,Cloud Infrastructure,35.2
+TKT-0772,P2,Security Operations,,Security Operations,1.8
+TKT-0773,P2,Help Desk,,Help Desk,0.5
+TKT-0774,P2,Service Desk,Security Operations|Desktop Support|Database Administration,Database Administration,21.8
+TKT-0775,P3,Network Operations,Security Operations|Telephony|Network Operations,Network Operations,19.3
+TKT-0776,P1,Network Operations,,Network Operations,0.4
+TKT-0777,P4,Service Desk,,Service Desk,1.6
+TKT-0778,P4,Help Desk,,Help Desk,1.1
+TKT-0779,P1,Network Operations,Desktop Support|Storage & Backup|Security Operations,Security Operations,35.4
+TKT-0780,P2,Network Operations,Desktop Support|Security Operations|Database Administration,Database Administration,24.7
+TKT-0781,P3,Service Desk,,Service Desk,2.0
+TKT-0782,P2,Service Desk,Database Administration|Cloud Infrastructure|Storage & Backup,Storage & Backup,22.9
+TKT-0783,P2,Network Operations,Telephony,Telephony,18.3
+TKT-0784,P3,Help Desk,Network Operations|Desktop Support,Desktop Support,13.6
+TKT-0785,P1,Security Operations,Telephony|Storage & Backup,Storage & Backup,31.5
+TKT-0786,P1,Service Desk,Security Operations|Network Operations,Network Operations,30.1
+TKT-0787,P3,Service Desk,Network Operations|Identity & Access,Identity & Access,14.0
+TKT-0788,P2,Network Operations,Security Operations,Security Operations,17.1
+TKT-0789,P4,Security Operations,,Security Operations,1.1
+TKT-0790,P4,Help Desk,Telephony|Network Operations|Desktop Support,Desktop Support,12.5
+TKT-0791,P4,Security Operations,,Security Operations,0.8
+TKT-0792,P2,Security Operations,Cloud Infrastructure|Application Development,Application Development,19.7
+TKT-0793,P1,Network Operations,Application Development|Security Operations,Security Operations,31.7
+TKT-0794,P4,Service Desk,,Service Desk,2.0
+TKT-0795,P3,Help Desk,Desktop Support,Desktop Support,10.5
+TKT-0796,P4,Service Desk,,Service Desk,1.9
+TKT-0797,P3,Security Operations,,Security Operations,1.8
+TKT-0798,P1,Help Desk,Storage & Backup,Storage & Backup,28.9
+TKT-0799,P2,Network Operations,Database Administration|Storage & Backup|Email & Collaboration,Email & Collaboration,25.7
+TKT-0800,P4,Security Operations,,Security Operations,0.2
+TKT-0801,P2,Security Operations,Email & Collaboration,Email & Collaboration,17.4
+TKT-0802,P2,Security Operations,Telephony|Network Operations|Application Development,Application Development,24.7
+TKT-0803,P2,Service Desk,Security Operations,Security Operations,15.3
+TKT-0804,P4,Network Operations,,Network Operations,0.2
+TKT-0805,P3,Security Operations,,Security Operations,1.1
+TKT-0806,P4,Security Operations,,Security Operations,0.2
+TKT-0807,P1,Security Operations,Storage & Backup,Storage & Backup,29.0
+TKT-0808,P3,Network Operations,,Network Operations,0.4
+TKT-0809,P1,Network Operations,Storage & Backup|Database Administration,Database Administration,31.3
+TKT-0810,P3,Network Operations,Database Administration|Cloud Infrastructure|Telephony,Telephony,17.4
+TKT-0811,P3,Help Desk,,Help Desk,1.0
+TKT-0812,P1,Service Desk,Application Development|Telephony,Telephony,32.9
+TKT-0813,P1,Security Operations,Security Operations|Desktop Support|Network Operations,Network Operations,37.9
+TKT-0814,P1,Security Operations,Desktop Support|Email & Collaboration|Application Development,Application Development,36.3
+TKT-0815,P3,Help Desk,Cloud Infrastructure|Desktop Support|Identity & Access,Identity & Access,16.9
+TKT-0816,P2,Help Desk,,Help Desk,0.1
+TKT-0817,P1,Network Operations,Desktop Support,Desktop Support,27.2
+TKT-0818,P4,Network Operations,,Network Operations,1.4
+TKT-0819,P1,Network Operations,Desktop Support,Desktop Support,27.2
+TKT-0820,P4,Service Desk,,Service Desk,0.8
+TKT-0821,P3,Security Operations,,Security Operations,0.6
+TKT-0822,P1,Help Desk,Security Operations|Identity & Access,Identity & Access,33.8
+TKT-0823,P3,Security Operations,,Security Operations,0.9
+TKT-0824,P2,Help Desk,Security Operations|Telephony|Application Development,Application Development,24.3
+TKT-0825,P1,Security Operations,Database Administration|Application Development,Application Development,31.3
+TKT-0826,P1,Security Operations,,Security Operations,2.0
+TKT-0827,P2,Service Desk,Desktop Support|Email & Collaboration,Email & Collaboration,21.3
+TKT-0828,P4,Network Operations,,Network Operations,1.4
+TKT-0829,P2,Help Desk,Security Operations|Identity & Access|Application Development,Application Development,23.1
+TKT-0830,P2,Service Desk,,Service Desk,1.5
+TKT-0831,P1,Network Operations,Application Development|Security Operations|Storage & Backup,Storage & Backup,35.4
+TKT-0832,P1,Security Operations,Application Development|Storage & Backup|Email & Collaboration,Email & Collaboration,35.5
+TKT-0833,P1,Help Desk,Security Operations|Telephony|Identity & Access,Identity & Access,33.3
+TKT-0834,P3,Network Operations,,Network Operations,1.0
+TKT-0835,P2,Service Desk,,Service Desk,0.6
+TKT-0836,P3,Help Desk,,Help Desk,0.5
+TKT-0837,P3,Network Operations,Database Administration,Database Administration,12.6
+TKT-0838,P2,Security Operations,Security Operations|Identity & Access,Identity & Access,19.3
+TKT-0839,P4,Service Desk,Desktop Support|Telephony,Telephony,9.6
+TKT-0840,P1,Help Desk,Email & Collaboration|Identity & Access|Storage & Backup,Storage & Backup,37.9
+TKT-0841,P4,Service Desk,Identity & Access|Telephony,Telephony,8.7
+TKT-0842,P2,Security Operations,,Security Operations,1.1
+TKT-0843,P2,Security Operations,,Security Operations,1.4
+TKT-0844,P4,Service Desk,,Service Desk,0.3
+TKT-0845,P2,Security Operations,,Security Operations,1.3
+TKT-0846,P1,Help Desk,Network Operations,Network Operations,28.8
+TKT-0847,P3,Network Operations,,Network Operations,1.0
+TKT-0848,P3,Help Desk,Security Operations,Security Operations,12.2
+TKT-0849,P1,Help Desk,Telephony,Telephony,27.9
+TKT-0850,P1,Service Desk,Identity & Access|Application Development|Database Administration,Database Administration,35.6
+TKT-0851,P1,Security Operations,Telephony|Storage & Backup|Security Operations,Security Operations,33.5
+TKT-0852,P3,Security Operations,Storage & Backup|Identity & Access|Cloud Infrastructure,Cloud Infrastructure,15.9
+TKT-0853,P3,Help Desk,,Help Desk,0.1
+TKT-0854,P1,Service Desk,Cloud Infrastructure|Desktop Support,Desktop Support,34.9
+TKT-0855,P3,Service Desk,Email & Collaboration|Database Administration|Telephony,Telephony,18.5
+TKT-0856,P4,Service Desk,Network Operations|Desktop Support,Desktop Support,12.2
+TKT-0857,P2,Help Desk,Storage & Backup,Storage & Backup,17.2
+TKT-0858,P3,Network Operations,,Network Operations,0.2
+TKT-0859,P4,Security Operations,,Security Operations,1.5
+TKT-0860,P1,Security Operations,Network Operations,Network Operations,30.7
+TKT-0861,P3,Network Operations,,Network Operations,1.1
+TKT-0862,P3,Security Operations,,Security Operations,1.7
+TKT-0863,P4,Help Desk,,Help Desk,1.3
+TKT-0864,P2,Service Desk,Database Administration,Database Administration,18.2
+TKT-0865,P2,Service Desk,Application Development|Storage & Backup|Desktop Support,Desktop Support,25.0
+TKT-0866,P1,Help Desk,Database Administration|Application Development|Email & Collaboration,Email & Collaboration,35.2
+TKT-0867,P2,Help Desk,Identity & Access|Application Development|Storage & Backup,Storage & Backup,23.3
+TKT-0868,P1,Network Operations,Identity & Access|Telephony|Network Operations,Network Operations,35.0
+TKT-0869,P4,Service Desk,,Service Desk,1.9
+TKT-0870,P2,Network Operations,Identity & Access|Cloud Infrastructure,Cloud Infrastructure,21.5
+TKT-0871,P1,Network Operations,,Network Operations,0.7
+TKT-0872,P2,Help Desk,Desktop Support|Email & Collaboration,Email & Collaboration,22.2
+TKT-0873,P2,Network Operations,Desktop Support|Identity & Access|Network Operations,Network Operations,25.7
+TKT-0874,P2,Service Desk,Desktop Support|Cloud Infrastructure,Cloud Infrastructure,19.1
+TKT-0875,P2,Service Desk,Storage & Backup|Desktop Support,Desktop Support,18.9
+TKT-0876,P2,Network Operations,Storage & Backup|Database Administration,Database Administration,20.2
+TKT-0877,P1,Network Operations,Telephony|Email & Collaboration|Application Development,Application Development,35.6
+TKT-0878,P2,Service Desk,Cloud Infrastructure|Storage & Backup,Storage & Backup,20.7
+TKT-0879,P2,Security Operations,Desktop Support|Security Operations,Security Operations,21.1
+TKT-0880,P4,Help Desk,,Help Desk,0.1
+TKT-0881,P1,Security Operations,Security Operations,Security Operations,28.0
+TKT-0882,P2,Help Desk,Security Operations|Desktop Support,Desktop Support,18.4
+TKT-0883,P4,Network Operations,,Network Operations,0.0
+TKT-0884,P3,Network Operations,Email & Collaboration|Security Operations|Telephony,Telephony,16.6
+TKT-0885,P2,Security Operations,Email & Collaboration,Email & Collaboration,18.2
+TKT-0886,P1,Network Operations,Identity & Access|Network Operations,Network Operations,33.5
+TKT-0887,P4,Network Operations,,Network Operations,0.9
+TKT-0888,P2,Service Desk,,Service Desk,0.5
+TKT-0889,P2,Help Desk,Cloud Infrastructure,Cloud Infrastructure,17.7
+TKT-0890,P1,Service Desk,Application Development|Security Operations|Desktop Support,Desktop Support,36.0
+TKT-0891,P1,Service Desk,Identity & Access|Network Operations,Network Operations,32.9
+TKT-0892,P2,Help Desk,Security Operations|Cloud Infrastructure|Storage & Backup,Storage & Backup,21.9
+TKT-0893,P1,Help Desk,Database Administration|Identity & Access|Cloud Infrastructure,Cloud Infrastructure,34.6
+TKT-0894,P3,Security Operations,,Security Operations,1.0
+TKT-0895,P3,Network Operations,Email & Collaboration|Network Operations|Telephony,Telephony,17.0
+TKT-0896,P1,Network Operations,Telephony|Identity & Access|Security Operations,Security Operations,35.3
+TKT-0897,P3,Service Desk,Cloud Infrastructure|Identity & Access,Identity & Access,15.7
+TKT-0898,P4,Help Desk,,Help Desk,1.1
+TKT-0899,P2,Security Operations,Cloud Infrastructure|Email & Collaboration|Desktop Support,Desktop Support,21.8
+TKT-0900,P3,Help Desk,Storage & Backup,Storage & Backup,13.1
+TKT-0901,P2,Help Desk,,Help Desk,0.1
+TKT-0902,P2,Service Desk,Desktop Support|Database Administration|Telephony,Telephony,22.6
+TKT-0903,P1,Service Desk,Security Operations,Security Operations,30.0
+TKT-0904,P1,Security Operations,Email & Collaboration,Email & Collaboration,30.5
+TKT-0905,P1,Service Desk,Cloud Infrastructure,Cloud Infrastructure,27.1
+TKT-0906,P1,Network Operations,Email & Collaboration|Security Operations,Security Operations,33.5
+TKT-0907,P2,Security Operations,Cloud Infrastructure,Cloud Infrastructure,18.5
+TKT-0908,P2,Help Desk,Telephony|Network Operations|Desktop Support,Desktop Support,22.8
+TKT-0909,P3,Help Desk,Application Development|Database Administration|Desktop Support,Desktop Support,19.4
+TKT-0910,P2,Service Desk,Database Administration,Database Administration,19.3
+TKT-0911,P3,Security Operations,,Security Operations,1.6
+TKT-0912,P4,Help Desk,,Help Desk,1.7
+TKT-0913,P1,Network Operations,Application Development|Cloud Infrastructure|Storage & Backup,Storage & Backup,36.9
+TKT-0914,P2,Help Desk,Application Development|Security Operations|Database Administration,Database Administration,21.5
+TKT-0915,P3,Service Desk,,Service Desk,1.8
+TKT-0916,P2,Service Desk,,Service Desk,0.1
+TKT-0917,P4,Help Desk,,Help Desk,0.3
+TKT-0918,P2,Help Desk,Email & Collaboration|Desktop Support|Application Development,Application Development,21.4
+TKT-0919,P1,Security Operations,Network Operations|Cloud Infrastructure,Cloud Infrastructure,31.3
+TKT-0920,P4,Network Operations,Desktop Support|Email & Collaboration|Identity & Access,Identity & Access,15.0
+TKT-0921,P1,Network Operations,Database Administration|Network Operations|Application Development,Application Development,33.2
+TKT-0922,P3,Network Operations,Application Development,Application Development,12.8
+TKT-0923,P4,Network Operations,,Network Operations,0.8
+TKT-0924,P4,Help Desk,,Help Desk,1.9
+TKT-0925,P1,Network Operations,Application Development|Network Operations|Identity & Access,Identity & Access,37.6
+TKT-0926,P1,Security Operations,Telephony,Telephony,28.6
+TKT-0927,P4,Network Operations,Cloud Infrastructure|Email & Collaboration,Email & Collaboration,9.2
+TKT-0928,P4,Security Operations,Network Operations,Network Operations,7.1
+TKT-0929,P1,Service Desk,Telephony,Telephony,31.6
+TKT-0930,P2,Help Desk,,Help Desk,0.9
+TKT-0931,P4,Security Operations,,Security Operations,1.4
+TKT-0932,P2,Service Desk,Identity & Access|Storage & Backup|Telephony,Telephony,21.6
+TKT-0933,P1,Service Desk,Application Development,Application Development,29.3
+TKT-0934,P1,Network Operations,Cloud Infrastructure|Storage & Backup,Storage & Backup,33.9
+TKT-0935,P1,Security Operations,Cloud Infrastructure|Security Operations,Security Operations,34.2
+TKT-0936,P2,Service Desk,Telephony|Identity & Access|Network Operations,Network Operations,22.8
+TKT-0937,P2,Security Operations,Desktop Support|Cloud Infrastructure|Network Operations,Network Operations,23.6
+TKT-0938,P2,Service Desk,Identity & Access|Network Operations,Network Operations,22.9
+TKT-0939,P1,Service Desk,Network Operations|Email & Collaboration,Email & Collaboration,34.3
+TKT-0940,P3,Network Operations,Email & Collaboration|Cloud Infrastructure|Desktop Support,Desktop Support,16.0
+TKT-0941,P1,Service Desk,Desktop Support,Desktop Support,29.7
+TKT-0942,P1,Network Operations,Cloud Infrastructure,Cloud Infrastructure,27.6
+TKT-0943,P4,Service Desk,,Service Desk,0.3
+TKT-0944,P1,Help Desk,Email & Collaboration|Database Administration,Database Administration,33.5
+TKT-0945,P2,Help Desk,Email & Collaboration,Email & Collaboration,16.5
+TKT-0946,P4,Service Desk,,Service Desk,1.9
+TKT-0947,P2,Service Desk,Desktop Support|Identity & Access|Storage & Backup,Storage & Backup,22.2
+TKT-0948,P1,Network Operations,Application Development,Application Development,29.2
+TKT-0949,P3,Service Desk,Cloud Infrastructure,Cloud Infrastructure,13.6
+TKT-0950,P4,Service Desk,Security Operations|Application Development,Application Development,8.9
+TKT-0951,P3,Security Operations,,Security Operations,0.8
+TKT-0952,P3,Service Desk,Cloud Infrastructure,Cloud Infrastructure,13.9
+TKT-0953,P4,Help Desk,,Help Desk,1.4
+TKT-0954,P3,Security Operations,Security Operations|Network Operations,Network Operations,12.5
+TKT-0955,P4,Help Desk,,Help Desk,1.2
+TKT-0956,P1,Security Operations,Storage & Backup|Application Development|Cloud Infrastructure,Cloud Infrastructure,33.9
+TKT-0957,P2,Security Operations,Database Administration|Storage & Backup,Storage & Backup,19.2
+TKT-0958,P4,Security Operations,Network Operations,Network Operations,7.1
+TKT-0959,P4,Help Desk,,Help Desk,0.7
+TKT-0960,P2,Service Desk,,Service Desk,0.8
+TKT-0961,P2,Service Desk,,Service Desk,0.8
+TKT-0962,P1,Security Operations,Telephony|Security Operations|Identity & Access,Identity & Access,35.0
+TKT-0963,P4,Help Desk,,Help Desk,0.3
+TKT-0964,P2,Security Operations,Network Operations|Identity & Access,Identity & Access,19.7
+TKT-0965,P4,Network Operations,,Network Operations,1.8
+TKT-0966,P1,Help Desk,Application Development|Cloud Infrastructure,Cloud Infrastructure,32.7
+TKT-0967,P1,Service Desk,Database Administration|Email & Collaboration|Telephony,Telephony,35.6
+TKT-0968,P1,Security Operations,Cloud Infrastructure,Cloud Infrastructure,28.7
+TKT-0969,P1,Service Desk,Security Operations|Desktop Support|Email & Collaboration,Email & Collaboration,37.8
+TKT-0970,P1,Network Operations,Telephony|Cloud Infrastructure|Storage & Backup,Storage & Backup,33.5
+TKT-0971,P3,Help Desk,Network Operations|Storage & Backup,Storage & Backup,16.9
+TKT-0972,P4,Security Operations,Desktop Support|Application Development|Database Administration,Database Administration,12.6
+TKT-0973,P4,Service Desk,,Service Desk,1.8
+TKT-0974,P1,Help Desk,Telephony|Database Administration|Security Operations,Security Operations,36.1
+TKT-0975,P3,Network Operations,,Network Operations,2.0
+TKT-0976,P1,Network Operations,,Network Operations,0.7
+TKT-0977,P4,Help Desk,,Help Desk,1.3
+TKT-0978,P1,Security Operations,Cloud Infrastructure,Cloud Infrastructure,30.6
+TKT-0979,P3,Network Operations,Storage & Backup|Email & Collaboration,Email & Collaboration,16.8
+TKT-0980,P1,Service Desk,Application Development,Application Development,29.2
+TKT-0981,P2,Service Desk,Database Administration|Application Development,Application Development,18.9
+TKT-0982,P4,Network Operations,,Network Operations,0.6
+TKT-0983,P2,Service Desk,Security Operations,Security Operations,19.3
+TKT-0984,P1,Service Desk,Identity & Access|Network Operations,Network Operations,30.0
+TKT-0985,P1,Network Operations,Security Operations,Security Operations,29.9
+TKT-0986,P2,Network Operations,Telephony|Database Administration,Database Administration,21.4
+TKT-0987,P3,Help Desk,Database Administration|Application Development|Network Operations,Network Operations,15.9
+TKT-0988,P3,Service Desk,,Service Desk,1.3
+TKT-0989,P2,Service Desk,Network Operations,Network Operations,17.5
+TKT-0990,P2,Security Operations,Security Operations|Storage & Backup,Storage & Backup,22.4
+TKT-0991,P2,Service Desk,,Service Desk,1.6
+TKT-0992,P1,Service Desk,Telephony,Telephony,29.0
+TKT-0993,P4,Service Desk,,Service Desk,1.2
+TKT-0994,P3,Network Operations,Storage & Backup|Email & Collaboration,Email & Collaboration,14.6
+TKT-0995,P2,Network Operations,Application Development|Email & Collaboration|Desktop Support,Desktop Support,22.2
+TKT-0996,P4,Help Desk,Network Operations,Network Operations,9.2
+TKT-0997,P1,Security Operations,,Security Operations,2.0
+TKT-0998,P1,Help Desk,Email & Collaboration|Cloud Infrastructure,Cloud Infrastructure,33.9
+TKT-0999,P2,Network Operations,Email & Collaboration|Cloud Infrastructure,Cloud Infrastructure,22.2
+TKT-1000,P2,Help Desk,Telephony|Application Development|Database Administration,Database Administration,23.7

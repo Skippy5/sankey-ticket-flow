@@ -1,0 +1,51 @@
+ticket_id,priority,open_group,routing_groups,closed_group,resolution_hours
+TKT-0001,P2,Network Operations,Security Operations|Network Operations|Desktop Support,Desktop Support,25.7
+TKT-0002,P1,Network Operations,Network Operations|Desktop Support|Application Development,Application Development,36.4
+TKT-0003,P1,Help Desk,Storage & Backup|Cloud Infrastructure,Cloud Infrastructure,32.0
+TKT-0004,P2,Help Desk,Email & Collaboration|Network Operations,Network Operations,19.4
+TKT-0005,P4,Network Operations,,Network Operations,0.1
+TKT-0006,P1,Network Operations,Security Operations|Email & Collaboration,Email & Collaboration,33.8
+TKT-0007,P4,Service Desk,,Service Desk,1.7
+TKT-0008,P3,Network Operations,,Network Operations,2.0
+TKT-0009,P3,Service Desk,,Service Desk,1.7
+TKT-0010,P4,Network Operations,Security Operations|Email & Collaboration|Cloud Infrastructure,Cloud Infrastructure,14.8
+TKT-0011,P2,Service Desk,Security Operations|Cloud Infrastructure|Network Operations,Network Operations,24.1
+TKT-0012,P3,Network Operations,Storage & Backup|Application Development|Telephony,Telephony,19.1
+TKT-0013,P2,Service Desk,Cloud Infrastructure,Cloud Infrastructure,17.9
+TKT-0014,P4,Network Operations,,Network Operations,1.9
+TKT-0015,P2,Network Operations,Database Administration,Database Administration,18.2
+TKT-0016,P4,Network Operations,Email & Collaboration,Email & Collaboration,6.3
+TKT-0017,P4,Service Desk,,Service Desk,2.0
+TKT-0018,P2,Security Operations,Cloud Infrastructure|Security Operations,Security Operations,22.8
+TKT-0019,P1,Security Operations,Telephony|Application Development,Application Development,34.0
+TKT-0020,P2,Help Desk,Email & Collaboration|Network Operations|Database Administration,Database Administration,21.5
+TKT-0021,P4,Security Operations,Security Operations,Security Operations,8.5
+TKT-0022,P4,Security Operations,,Security Operations,1.1
+TKT-0023,P2,Security Operations,Desktop Support|Identity & Access,Identity & Access,22.2
+TKT-0024,P4,Security Operations,,Security Operations,0.3
+TKT-0025,P3,Service Desk,Application Development|Database Administration|Identity & Access,Identity & Access,17.0
+TKT-0026,P1,Help Desk,Email & Collaboration|Identity & Access,Identity & Access,32.0
+TKT-0027,P2,Service Desk,Telephony|Identity & Access,Identity & Access,22.6
+TKT-0028,P2,Network Operations,Storage & Backup|Cloud Infrastructure|Telephony,Telephony,25.2
+TKT-0029,P1,Help Desk,Identity & Access,Identity & Access,28.3
+TKT-0030,P4,Help Desk,,Help Desk,0.6
+TKT-0031,P2,Service Desk,Email & Collaboration|Database Administration,Database Administration,18.3
+TKT-0032,P2,Network Operations,Network Operations|Telephony|Email & Collaboration,Email & Collaboration,26.0
+TKT-0033,P3,Help Desk,,Help Desk,1.1
+TKT-0034,P2,Network Operations,Identity & Access|Network Operations,Network Operations,22.4
+TKT-0035,P2,Network Operations,Cloud Infrastructure,Cloud Infrastructure,15.1
+TKT-0036,P2,Service Desk,Application Development,Application Development,18.8
+TKT-0037,P1,Help Desk,Identity & Access|Database Administration|Cloud Infrastructure,Cloud Infrastructure,35.5
+TKT-0038,P1,Network Operations,,Network Operations,1.7
+TKT-0039,P2,Security Operations,,Security Operations,0.5
+TKT-0040,P3,Service Desk,Cloud Infrastructure|Desktop Support|Database Administration,Database Administration,17.9
+TKT-0041,P1,Service Desk,Storage & Backup|Desktop Support,Desktop Support,30.6
+TKT-0042,P3,Help Desk,,Help Desk,1.1
+TKT-0043,P2,Service Desk,Application Development|Telephony,Telephony,22.2
+TKT-0044,P2,Help Desk,Security Operations|Network Operations,Network Operations,21.1
+TKT-0045,P4,Network Operations,,Network Operations,1.5
+TKT-0046,P1,Network Operations,Telephony|Cloud Infrastructure,Cloud Infrastructure,30.1
+TKT-0047,P3,Help Desk,Email & Collaboration,Email & Collaboration,13.6
+TKT-0048,P2,Network Operations,Cloud Infrastructure,Cloud Infrastructure,16.1
+TKT-0049,P2,Help Desk,Identity & Access|Database Administration,Database Administration,19.4
+TKT-0050,P3,Network Operations,Application Development|Identity & Access|Network Operations,Network Operations,16.7
